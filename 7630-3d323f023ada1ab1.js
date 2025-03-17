@@ -1412,7 +1412,7 @@
         let m = window.console.error;
         (window.console.error = function () {
           for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-          (0, h.isNextRouterError)(t[0]) || m.apply(window.console, t);
+          // (0, h.isNextRouterError)(t[0]) || m.apply(window.console, t);
         }),
           window.addEventListener('error', e => {
             if ((0, h.isNextRouterError)(e.error)) {
