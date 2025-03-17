@@ -1,0 +1,83 @@
+.swiper-fade.swiper-free-mode .swiper-slide {
+    transition-timing-function: ease-out
+}
+
+.swiper-fade .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity
+}
+
+.swiper-fade .swiper-slide .swiper-slide {
+    pointer-events: none
+}
+
+.swiper-fade .swiper-slide-active,
+.swiper-fade .swiper-slide-active .swiper-slide-active {
+    pointer-events: auto
+}
+
+.FeaturesDesktopSection_pagination__IkFha {
+    position: absolute;
+    top: 14rem;
+    display: flex;
+    z-index: 1
+}
+
+.FeaturesDesktopSection_pagination-item__bKjDt {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: width 1.2s cubic-bezier(.45, 0, .55, 1), opacity .5s var(--ease), transform .7s var(--ease);
+    will-change: width;
+    transform: translate3d(0, 2rem, 0);
+    opacity: 0
+}
+
+.FeaturesDesktopSection_pagination-item__bKjDt:nth-child(2) {
+    transition: width 1.2s cubic-bezier(.45, 0, .55, 1), opacity .5s var(--ease) .1s, transform .7s var(--ease) .1s
+}
+
+.FeaturesDesktopSection_pagination-item__bKjDt:nth-child(3) {
+    transition: width 1.2s cubic-bezier(.45, 0, .55, 1), opacity .5s var(--ease) .2s, transform .7s var(--ease) .2s
+}
+
+.FeaturesDesktopSection_pagination-item__bKjDt:nth-child(4) {
+    transition: width 1.2s cubic-bezier(.45, 0, .55, 1), opacity .5s var(--ease) .3s, transform .7s var(--ease) .3s
+}
+
+.FeaturesDesktopSection_pagination-item__bKjDt:nth-child(5) {
+    transition: width 1.2s cubic-bezier(.45, 0, .55, 1), opacity .5s var(--ease) .4s, transform .7s var(--ease) .4s
+}
+
+.FeaturesDesktopSection_pagination__IkFha.FeaturesDesktopSection_is-active__6SneI .FeaturesDesktopSection_pagination-item__bKjDt {
+    opacity: 1;
+    transform: translateZ(0)
+}
+
+.FeaturesDesktopSection_pagination-item__bKjDt:after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 4px;
+    background-color: currentColor;
+    opacity: .15;
+    border-radius: 2px;
+    transition: width 1.2s cubic-bezier(.45, 0, .55, 1), opacity .7s var(--ease);
+    will-change: width;
+    transform: translateZ(0)
+}
+
+.FeaturesDesktopSection_pagination-item-active__uwOaP {
+    cursor: default;
+    width: 56px
+}
+
+.FeaturesDesktopSection_pagination-item-active__uwOaP:after {
+    opacity: 1;
+    width: 48px
+}
+
+/*# sourceMappingURL=78d2265c972bd054.css.map*/
