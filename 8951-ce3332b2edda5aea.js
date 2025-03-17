@@ -1085,7 +1085,7 @@
           c = { src: 'https://mhmadraziq.github.io/elevate-assets/images/logo.webp' },
           l = { src: 'https://mhmadraziq.github.io/elevate-assets/images/logo.webp' },
           s = {
-            src: './manyChat_files/logo.webp',
+            src: 'https://mhmadraziq.github.io/elevate-assets/images/logo.webp',
           },
           o = n(49480),
           d = e => {
