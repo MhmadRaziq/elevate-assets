@@ -1080,10 +1080,10 @@
         var a = n(27573),
           r = n(7653),
           i = {
-            src: './manyChat_files/logo.webp',
+            src: 'https://mhmadraziq.github.io/elevate-assets/logo.webp',
           },
-          c = { src: './manyChat_files/logo.webp' },
-          l = { src: './manyChat_files/logo.webp' },
+          c = { src: 'https://mhmadraziq.github.io/elevate-assets/logo.webp' },
+          l = { src: 'https://mhmadraziq.github.io/elevate-assets/logo.webp' },
           s = {
             src: './manyChat_files/logo.webp',
           },
