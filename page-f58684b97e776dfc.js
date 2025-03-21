@@ -148,7 +148,7 @@
                 children: (0, i.jsx)('div', {
                   className: 'w w_l',
                   children: (0, i.jsx)('div', {
-                    className: 'grid_3 grid_gap grid',
+                    className: 'grid_2 grid_gap grid',
                     children: l.wm.map((e, n) =>
                       (0, i.jsx)(o.w8, { ...e, dict: s, handleClick: P }, 'pricing-card-'.concat(n))
                     ),
