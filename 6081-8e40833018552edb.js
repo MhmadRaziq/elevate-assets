@@ -460,16 +460,16 @@
           },
         ],
         u = [
-          {
-            title: 'Free',
-            button: (0, n.jsxs)(n.Fragment, {
-              children: ['Start for ', (0, n.jsx)('span', { children: 'Free' })],
-            }),
-            subline: 'No credit card required!',
-            href: l.freeHref,
-            gaDataEventName: 'main_cta_click',
-            gaDataCtaId: 'cta1',
-          },
+          // {
+          //   title: 'Free',
+          //   button: (0, n.jsxs)(n.Fragment, {
+          //     children: ['Start for ', (0, n.jsx)('span', { children: 'Free' })],
+          //   }),
+          //   subline: 'No credit card required!',
+          //   href: l.freeHref,
+          //   gaDataEventName: 'main_cta_click',
+          //   gaDataCtaId: 'cta1',
+          // },
           {
             title: 'Pro',
             button: (0, n.jsxs)(n.Fragment, {
