@@ -268,7 +268,7 @@
                 }),
               ],
             }),
-            pricingFeaturesSecondTitle: 'Everything in Free, plus:',
+            pricingFeaturesSecondTitle: 'pro:',
           },
           {
             pricingFeaturesFirstText: e =>
