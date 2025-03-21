@@ -98,29 +98,6 @@
         },
         d = [
           {
-            title: 'Free',
-            subline:
-              'Get started with a personalized demo to see how our system can help your venue collect more 5-star reviews—FREE OF CHARGE.',
-            price: e => (0, o.H)(0, e),
-            button: {
-              children: 'Get started',
-              to: '/signup?utm_content=freeplan',
-              gaDataEventName: 'main_cta_click',
-              gaDataCtaId: 'hero',
-            },
-            tooltip:
-              'Please note: Access to some features will be restricted once 1000 contacts is reached with a Free account. Free accounts may not delete or unsubscribe any contacts from their audience.',
-            description: () =>
-              (0, n.jsx)(n.Fragment, {
-                children: (0, n.jsx)('p', {
-                  children: 'No credit card, no commitment required!',
-                }),
-              }),
-            recommended: !1,
-            background: 'var(--grey)',
-            foreground: 'var(--black)',
-          },
-          {
             title: 'Pro',
             subline:
               'Grow your business with full access to our review generation system, turning every table into a review machine—starting at a cost of:',
