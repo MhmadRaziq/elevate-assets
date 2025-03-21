@@ -134,61 +134,7 @@
           },
         ],
         m = [
-          {
-            pricingFeaturesFirstText: e =>
-              (0, n.jsxs)('ul', {
-                children: [
-                 
-                ],
-              }),
-            pricingFeaturesFirstTitle: '',
-            pricingFeaturesPlanTitle: e => 'Free Plan — '.concat((0, o.H)(0, e)),
-            pricingFeaturesSecondText: (0, n.jsxs)('ul', {
-              children: [
-                (0, n.jsx)('li', {
-                  children: (0, n.jsxs)('div', {
-                    className: 'p',
-                    children: [
-                      (0, n.jsx)('span', {
-                        className: 'text_bold',
-                        children: 'Experience the system in action.',
-                      }),
-                      ' Get a personalized demo to see how it works for your venue.',
-                      (0, n.jsx)(c.u, {
-                        message:
-                          'Contacts are customers that have interacted with your bot through any of the channels. Contacts may not be deleted or unsubscribed on the Free plan.',
-                      }),
-                    ],
-                  }),
-                }),
-                (0, n.jsx)('li', {
-                  children: (0, n.jsxs)('div', {
-                    className: 'p',
-                    children: [
-                      (0, n.jsx)('span', {
-                        className: 'text_bold',
-                        children: 'Understand your review flow.',
-                      }),
-                      ' Learn how to turn more happy customers into 5-star Google reviews.',
-                    ],
-                  }),
-                }),
-                (0, n.jsx)('li', {
-                  children: (0, n.jsxs)('div', {
-                    className: 'p',
-                    children: [
-                      (0, n.jsx)('span', {
-                        className: 'text_bold',
-                        children: 'No commitment, no risk.',
-                      }),
-                      ' Just a quick walkthrough to see if it’s a fit for your business.',
-                    ],
-                  }),
-                }),
-              ],
-            }),
-            pricingFeaturesSecondTitle: 'Key features:',
-          },
+         
           {
             pricingFeaturesFirstText: e =>
               (0, n.jsxs)('ul', {
