@@ -475,7 +475,6 @@
                 tooltip:
                   'A Flow contains the messages, actions, and transitions that make up an automated conversation for your bot.',
                 compared: [
-                  { name: 'Free', value: 'Unlimited', accent: !1 },
                   { name: 'Pro', value: 'Unlimited', accent: !0 },
                   { name: 'Elite', value: 'Unlimited', accent: !0 },
                 ],
@@ -484,7 +483,6 @@
                 title: 'AI-generated review responses',
                 tooltip: 'Use Tags to mark, organize, and segment your contacts',
                 compared: [
-                  { name: 'Free', value: '-', accent: !1 },
                   { name: 'Pro', value: 'Unlimited', accent: !0 },
                   { name: 'Elite', value: 'Unlimited', accent: !0 },
                 ],
@@ -493,7 +491,6 @@
                 title: 'Custom review triggers (QR/NFC)',
                 tooltip: '',
                 compared: [
-                  { name: 'Free', value: '3 Triggers', accent: !1 },
                   { name: 'Pro', value: 'Unlimited', accent: !0 },
                   { name: 'Elite', value: 'Unlimited', accent: !0 },
                 ],
@@ -503,7 +500,6 @@
                 tooltip:
                   'Team members include owners, admins, live chat agents, editors, and viewers.',
                 compared: [
-                  { name: 'Free', value: '-', accent: !1 },
                   { name: 'Pro', value: '+', accent: !0 },
                   { name: 'Elite', value: '+', accent: !0 },
                 ],
@@ -512,7 +508,6 @@
                 title: 'Live dashboard for review tracking ',
                 tooltip: '',
                 compared: [
-                  { name: 'Free', value: '-', accent: !1 },
                   { name: 'Pro', value: '+', accent: !0 },
                   { name: 'Elite', value: '+', accent: !0 },
                 ],
@@ -521,7 +516,6 @@
                 title: 'Access quick campaign templates by industry',
                 tooltip: '',
                 compared: [
-                  { name: 'Free', value: '+', accent: !1 },
                   { name: 'Pro', value: '+', accent: !0 },
                   { name: 'Elite', value: '+', accent: !0 },
                 ],
@@ -531,7 +525,6 @@
                 tooltip:
                   'Live Chat agents can pause automation and jump into a live customer conversation when needed.',
                 compared: [
-                  { name: 'Free', value: '-', accent: !1 },
                   { name: 'Pro', value: '+', accent: !1 },
                   { name: 'Elite', value: '+', accent: !1 },
                 ],
@@ -540,7 +533,6 @@
                 title: 'Optimise performance with AI insights',
                 tooltip: '',
                 compared: [
-                  { name: 'Free', value: '-', accent: !1 },
                   { name: 'Pro', value: '+', accent: !1 },
                   { name: 'Elite', value: '+', accent: !1 },
                 ],
@@ -550,7 +542,6 @@
                 tooltip:
                   'Ask customers for information about them and collect valuable contact data in one tap, to build your customer database easily.',
                 compared: [
-                  { name: 'Free', value: '-', accent: !1 },
                   { name: 'Pro', value: '-', accent: !1 },
                   { name: 'Elite', value: '+', accent: !1 },
                 ],
@@ -559,7 +550,6 @@
                 title: 'Dedicated onboarding for your team',
                 tooltip: '',
                 compared: [
-                  { name: 'Free', value: '-', accent: !1 },
                   { name: 'Pro', value: '-', accent: !1 },
                   { name: 'Elite', value: '+', accent: !1 },
                 ],
@@ -568,7 +558,6 @@
                 title: 'Priority support',
                 tooltip: '',
                 compared: [
-                  { name: 'Free', value: '-', accent: !1 },
                   { name: 'Pro', value: '-', accent: !0 },
                   { name: 'Elite', value: '+', accent: !0 },
                 ],
