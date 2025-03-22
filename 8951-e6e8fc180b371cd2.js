@@ -3984,7 +3984,7 @@
             ? 'https://mhmadraziq.github.io/elevate-assets/images/'
                 .concat(
                   t.split('/').pop().split('.')[0], // Extracts base filename without extension (e.g., 'Step1')
-                  '-'.concat(n, '.svg') // Appends width and file extension (e.g., '-750.svg')
+                  '-'.concat(n, '.png') // Appends width and file extension (e.g., '-750.svg')
                 )
             : '';
         }
@@ -4350,8 +4350,8 @@
         'use strict';
         n.r(t),
           (t.default = {
-            src: 'https://mhmadraziq.github.io/elevate-assets/images/InstagramDM.png',
-            height: 70,
+            src: 'https://mccdn.me/martech/next-lp//_next/static/media/instagram.07dc14cd.svg',
+            height: 270,
             width: 270,
             blurWidth: 0,
             blurHeight: 0,
@@ -4361,7 +4361,7 @@
         'use strict';
         n.r(t),
           (t.default = {
-            src: 'https://mhmadraziq.github.io/elevate-assets/images/MessengerDM.png',
+            src: 'https://mccdn.me/martech/next-lp//_next/static/media/messenger.aac6546b.svg',
             height: 270,
             width: 270,
             blurWidth: 0,
@@ -4383,7 +4383,7 @@
         'use strict';
         n.r(t),
           (t.default = {
-            src: 'https://mhmadraziq.github.io/elevate-assets/images/WhatsappDM.png',
+            src: 'https://mccdn.me/martech/next-lp//_next/static/media/whatsapp.742928a4.svg',
             height: 270,
             width: 270,
             blurWidth: 0,
