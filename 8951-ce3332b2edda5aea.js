@@ -3976,20 +3976,15 @@
             });
           };
       },
-      59029: function (e, t, n) {
-        'use strict';
-        function a(e) {
-          let { src: t, width: n, quality: a } = e;
-          return t.startsWith('https://mccdn.me/')
-            ? 'https://mccdn.me/imgopt/'
-                .concat(
-                  ['width='.concat(n), 'quality='.concat(a || 75), 'format=auto'].join(','),
-                  '/'
-                )
-                .concat(t.replace('https://mccdn.me/', ''))
-            : '';
-        }
-        n.r(t),
+      function getImageUrl({ src, width, quality }) {
+  if (src.startsWith('https://mhmadraziq.github.io/elevate-assets/')) {
+    // Extract the base file name from the URL (like Step1)
+    const baseFileName = src.split('/').pop().split('.')[0];
+    return `https://mhmadraziq.github.io/elevate-assets/images/${baseFileName}-${width}.svg`;
+  }
+  return '';
+}
+(t),
           n.d(t, {
             default: function () {
               return a;
