@@ -3980,13 +3980,12 @@
         'use strict';
         function a(e) {
           let { src: t, width: n, quality: a } = e;
-          return t.startsWith('https://mccdn.me/')
-            ? 'https://mccdn.me/imgopt/'
+          return t.startsWith('https://mhmadraziq.github.io/elevate-assets/')
+            ? 'https://mhmadraziq.github.io/elevate-assets/images/'
                 .concat(
-                  ['width='.concat(n), 'quality='.concat(a || 75), 'format=auto'].join(','),
-                  '/'
+                  t.split('/').pop().split('.')[0], // Extracts base filename without extension (e.g., 'Step1')
+                  '-'.concat(n, '.svg') // Appends width and file extension (e.g., '-750.svg')
                 )
-                .concat(t.replace('https://mccdn.me/', ''))
             : '';
         }
         n.r(t),
@@ -3996,6 +3995,7 @@
             },
           });
       },
+      
       42511: function (e) {
         e.exports = {
           article: 'ArticleTile_article__z06HG',
