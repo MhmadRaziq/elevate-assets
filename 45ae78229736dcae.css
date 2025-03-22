@@ -965,13 +965,13 @@
 .OnScrollStripe_gallery-item__h_K7q {
     position: relative;
     height: 6rem;
-    width: auto;
+    width: 100px;
     margin-right: var(--x-xxl)
 }
 
 @media (min-width:768px) {
     .OnScrollStripe_gallery-item__h_K7q {
-        height: 10rem
+        height: 20px
     }
 }
 
@@ -2541,8 +2541,9 @@
 
 .CompareSection_button_border__bpRHq {
     width: auto;
-    border: 0px solid var(--black);
+    border: 1px solid var(--black);
     display: none !important;
+
 }
 
 .CompareSection_table__XDSz3 {
@@ -2572,7 +2573,8 @@
     display: none;
     margin-right: 1.3rem;
     width: 14px;
-    height: 14px
+    height: 14px;
+
 }
 
 .CompareSection_plus__OR1HW:after,
