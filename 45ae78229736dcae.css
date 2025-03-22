@@ -964,14 +964,14 @@
 
 .OnScrollStripe_gallery-item__h_K7q {
     position: relative;
-    height: 6rem;
+    height: 20px;
     width: auto;
     margin-right: var(--x-xxl)
 }
 
 @media (min-width:768px) {
     .OnScrollStripe_gallery-item__h_K7q {
-        height: 10rem
+        height: 20px
     }
 }
 
