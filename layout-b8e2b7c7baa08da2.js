@@ -490,7 +490,7 @@
         n.r(t),
           (t.default = {
             src: "https://mhmadraziq.github.io/elevate-assets/images/InstagramDM.png",
-            height: 270,
+            height: 70,
             width: 270,
             blurWidth: 0,
             blurHeight: 0,
@@ -500,7 +500,7 @@
         "use strict";
         n.r(t),
           (t.default = {
-            src: "https://mccdn.me/martech/next-lp//_next/static/media/messenger.aac6546b.svg",
+            src: "https://mhmadraziq.github.io/elevate-assets/images/MessengerDM.png",
             height: 270,
             width: 270,
             blurWidth: 0,
@@ -522,7 +522,7 @@
         "use strict";
         n.r(t),
           (t.default = {
-            src: "https://mccdn.me/martech/next-lp//_next/static/media/whatsapp.742928a4.svg",
+            src: "https://mhmadraziq.github.io/elevate-assets/images/WhatsappDM.png",
             height: 270,
             width: 270,
             blurWidth: 0,
