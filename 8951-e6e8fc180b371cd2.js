@@ -3984,7 +3984,7 @@
             ? 'https://mhmadraziq.github.io/elevate-assets/images/'
                 .concat(
                   t.split('/').pop().split('.')[0], // Extracts base filename without extension (e.g., 'Step1')
-                  '-'.concat(n, '.png') // Appends width and file extension (e.g., '-750.svg')
+                  '-'.concat(n, '.svg') // Appends width and file extension (e.g., '-750.svg')
                 )
             : '';
         }
@@ -4350,7 +4350,7 @@
         'use strict';
         n.r(t),
           (t.default = {
-            src: 'https://mccdn.me/martech/next-lp//_next/static/media/instagram.07dc14cd.svg',
+            src: 'https://mhmadraziq.github.io/elevate-assets/images/InstagramDM.png',
             height: 270,
             width: 270,
             blurWidth: 0,
