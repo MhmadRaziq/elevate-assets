@@ -1,4 +1,4 @@
-// var baseURI = "https://manychat.com";
+// var baseURI = "https://elevatereputation.com";
 // var pixelPath = "/analytics/png";
 // var whoamiPath = "/analytics/whoami";
 

@@ -933,7 +933,7 @@
                       className: 'mt-2rem sm:mt-3.2rem md:mt-4rem col-span-3 row-start-3',
                       style: { '--bg-color-base': a.x[r], '--text-color-base': a.x[l] },
                       children: (0, n.jsx)(s.tW, {
-                        href: '/signup',
+                        href: '/purchase',
                         className: '!bg-dynamic-base !text-dynamic-base',
                         children: o.text,
                       }),

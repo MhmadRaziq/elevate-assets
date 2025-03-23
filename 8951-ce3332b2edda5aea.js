@@ -1021,7 +1021,7 @@
           } catch (e) {
             x = !0;
           }
-          let f = !x && v.includes('https://manychat.com/') && !0,
+          let f = !x && v.includes('https://elevatereputation.com/') && !0,
             b = f ? v.replace(/^.*?:\/\/.*?(?=\/|$)/, '') : v,
             k = '',
             w = v + (k = window.location.search);
@@ -1051,9 +1051,9 @@
                     ? o.env.NEXT_PUBLIC_NEXT_CAREERS || 'careers' !== c
                       ? o.env.NEXT_PUBLIC_NEXT_LISTING || 'listing' !== c
                         ? o.env.NEXT_PUBLIC_NEXT_BLOG || 'blog' !== c
-                          ? 'https://manychat.com' + w
-                          : 'https://manychat.com/blog' + w
-                        : 'https://manychat.com/agency/listing' + w
+                          ? 'https://elevatereputation.com' + w
+                          : 'https://elevatereputation.com/blog' + w
+                        : 'https://elevatereputation.com/agency/listing' + w
                       : 'https://careers.manychat.com' + w
                     : 'https://events.manychat.com' + w),
                 d && d(w),
@@ -1126,7 +1126,7 @@
                     ],
                   }),
                   (0, a.jsx)('a', {
-                    href: 'https://manychat.com/affiliate/',
+                    href: 'https://elevatereputation.com/affiliate/',
                     target: '_blank',
                     children: (0, a.jsxs)('div', {
                       className: 'caps flex flex_aic pointer '.concat(o.underline),
@@ -1225,14 +1225,14 @@
               children: [
                 (0, a.jsx)('div', { children: 'Share:' }),
                 (0, a.jsx)('a', {
-                  href: 'http://twitter.com/share?url=https://manychat.com'.concat(n),
+                  href: 'http://twitter.com/share?url=https://elevatereputation.com'.concat(n),
                   className: ''.concat(i.share, ' ').concat(i.twitter, ' m_l-m'),
                   target: '_blank',
                   rel: 'noopener noreferrer',
                   children: (0, a.jsx)('span', { children: 'Twitter' }),
                 }),
                 (0, a.jsx)('a', {
-                  href: 'https://www.facebook.com/sharer/sharer.php?u=https://manychat.com'.concat(
+                  href: 'https://www.facebook.com/sharer/sharer.php?u=https://elevatereputation.com'.concat(
                     n
                   ),
                   className: ''.concat(i.share, ' ').concat(i.facebook),
@@ -1241,14 +1241,14 @@
                   children: (0, a.jsx)('span', { children: 'Facebook' }),
                 }),
                 (0, a.jsx)('a', {
-                  href: 'mailto:?body=https://manychat.com'.concat(n),
+                  href: 'mailto:?body=https://elevatereputation.com'.concat(n),
                   className: ''.concat(i.share, ' ').concat(i.email),
                   target: '_blank',
                   rel: 'noopener noreferrer',
                   children: (0, a.jsx)('span', { children: 'eMail' }),
                 }),
                 (0, a.jsx)('a', {
-                  href: 'https://www.linkedin.com/shareArticle?mini=true&url=https://manychat.com'.concat(
+                  href: 'https://www.linkedin.com/shareArticle?mini=true&url=https://elevatereputation.com'.concat(
                     n
                   ),
                   className: ''.concat(i.share, ' ').concat(i.linkedin),
@@ -3136,7 +3136,7 @@
                     gaDataCtaId: 'fb',
                   },
                 //   {
-                //     link: 'https://manychat.com/product/ai',
+                //     link: 'https://elevatereputation.com/product/ai',
                 //     label: 'Manychat AI',
                 //     description: 'A Smarter Way to Chat Automation',
                 //     icon: i.default.src,
@@ -3201,7 +3201,7 @@
             //           },
             //           {
             //             label: 'Manychat AI: A Smarter Way to Chat Automation',
-            //             link: 'https://manychat.com/product/ai/',
+            //             link: 'https://elevatereputation.com/product/ai/',
             //             image: {
             //               src: 'https://mccdn.me/martcdn/mc-land/constants/navigation/manychat-ai.jpg',
             //               width: 410,
@@ -3263,7 +3263,7 @@
                 //     gaDataCtaId: 'hire-an-agency',
                 //   },
                   {
-                    link: 'https://manychat.com/affiliate/',
+                    link: 'https://elevatereputation.com/affiliate/',
                     label: 'Join the Affiliate Program',
                     description: 'Earn up to 50% recurring commission',
                     icon: o.default.src,
@@ -3289,7 +3289,7 @@
             //         links: [
             //           {
             //             label: 'Blog',
-            //             link: 'https://manychat.com/blog/',
+            //             link: 'https://elevatereputation.com/blog/',
             //             gaDataEventName: 'resources_menu_click',
             //             gaDataCtaId: 'blog',
             //           },
@@ -3348,7 +3348,7 @@
             ],
             linksRight: {
               button: {
-                link: '/signup',
+                link: '/purchase',
                 label: 'Get Started',
                 eventName: 'signup-click',
                 gaDataEventName: 'main_cta_click',
@@ -3494,8 +3494,8 @@
           };
         var _ = n(74859);
         let h = [
-            { label: 'Privacy Policy', link: 'https://manychat.com/legal/privacy' },
-            { label: 'Terms of Service', link: 'https://manychat.com/legal/tos' },
+            { label: 'Privacy Policy', link: 'https://elevatereputation.com/legal/privacy' },
+            { label: 'Terms of Service', link: 'https://elevatereputation.com/legal/tos' },
           ],
           p = {
             bottomLinks: h,
@@ -3507,7 +3507,7 @@
             productLinks: [
               // { label: 'Messenger', link: '/product/messenger-marketing' },
               // { label: 'Instagram', link: '/product/instagram' },
-              // { label: 'Manychat AI', link: 'https://manychat.com/product/ai/', target: '_self' },
+              // { label: 'Manychat AI', link: 'https://elevatereputation.com/product/ai/', target: '_self' },
               // { label: 'SMS Marketing', link: '/sms-marketing' },
               // { label: 'Integrations', link: '/integrations' },
               // { label: 'For eCommerce', link: '/meet-chatmarketing-for-ecommerce' },
@@ -3520,7 +3520,7 @@
               // { label: 'Community', link: 'https://community.manychat.com/' },
               // { label: 'Video Course', link: '/resources/video-course' },
               // { label: 'How To', link: '/resources/how-to' },
-              // { label: 'Blog', link: 'https://manychat.com/blog/' },
+              // { label: 'Blog', link: 'https://elevatereputation.com/blog/' },
               // {
               //   label: 'Privacy Settings',
               //   link: '#',
@@ -3539,7 +3539,7 @@
             ],
             agenciesLinks: [
               // { type: 'listing', label: 'Hire an Agency', link: '/' },
-              // { label: 'Join the Affiliate Program', link: 'https://manychat.com/affiliate/' },
+              // { label: 'Join the Affiliate Program', link: 'https://elevatereputation.com/affiliate/' },
             ],
           },
           g = {
@@ -3564,7 +3564,7 @@
               'Your Reputation Can Make or Break Your Business – Take Control Now!o sales, leads, and\xa0conversions today',
             btn: {
               label: 'Get Started',
-              link: '/signup',
+              link: '/purchase',
               eventName: 'signup-click',
               gaDataEventName: 'main_cta_click',
               gaDataCtaId: 'footer',
@@ -3743,7 +3743,7 @@
             },
           ],
           y = {
-            en: { href: '/signup', text: 'get started' },
+            en: { href: '/purchase', text: 'get started' },
             es: { href: '/signup?lang=es', text: '\xa1reg\xedstrate ya!' },
             pt: { href: '/signup?lang=pt', text: 'come\xe7ar gratuitamente' },
           },
