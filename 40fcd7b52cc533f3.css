@@ -97,12 +97,12 @@
 }
 
 .TopBar_logo__tUnzY {
-    width: 12rem
+    width: 5rem
 }
 
 @media (min-width:1200px) {
     .TopBar_logo__tUnzY {
-        width: 15rem
+        width: 7rem
     }
 }
 
