@@ -3984,7 +3984,7 @@
             ? 'https://mhmadraziq.github.io/elevate-assets/images/'
                 .concat(
                   t.split('/').pop().split('.')[0], // Extracts base filename without extension (e.g., 'Step1')
-                  '-'.concat(n, '.svg') // Appends width and file extension (e.g., '-750.svg')
+                  '-'.concat(n, '.png') // Appends width and file extension (e.g., '-750.svg')
                 )
             : '';
         }
