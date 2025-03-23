@@ -1,4 +1,3 @@
-try {
     !function() {
   try {
       var e = "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {}
@@ -10614,6 +10613,3 @@ try {
   }
 }]);
 //# sourceMappingURL=1dd3208c-79bcc8848863ece4.js.map
-catch (error) {
-    console.error("An error occurred while executing the script:", error);
-}
