@@ -1080,12 +1080,12 @@
         var a = n(27573),
           r = n(7653),
           i = {
-            src: 'https://mhmadraziq.github.io/elevate-assets/images/logo.webp',
+            src: 'https://mhmadraziq.github.io/elevate-assets/images/loooogo.png',
           },
-          c = { src: 'https://mhmadraziq.github.io/elevate-assets/images/logo.webp' },
-          l = { src: 'https://mhmadraziq.github.io/elevate-assets/images/logo.webp' },
+          c = { src: 'https://mhmadraziq.github.io/elevate-assets/images/loooogo.png' },
+          l = { src: 'https://mhmadraziq.github.io/elevate-assets/images/loooogo.png' },
           s = {
-            src: 'https://mhmadraziq.github.io/elevate-assets/images/logo.webp',
+            src: 'https://mhmadraziq.github.io/elevate-assets/images/loooogo.png',
           },
           o = n(49480),
           d = e => {
