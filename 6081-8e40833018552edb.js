@@ -613,7 +613,7 @@
         //           'We strive to build the best Messenger Marketing platform in the world. If you are unhappy with Manychat for any reason, we provide a no-questions-asked refund within 30 days of purchase. More info in our',
         //           ' ',
         //           (0, n.jsx)('a', {
-        //             href: 'https://manychat.com/legal/tos',
+        //             href: 'https://elevatereputation.com/legal/tos',
         //             className: 'underline_link',
         //             rel: 'noopener noreferrer',
         //             target: '_blank',
