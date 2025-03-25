@@ -12003,7 +12003,7 @@
         const He = () => {
             _e.define()
         };
-        if (object && object.Mvt) {
+        if ( window.asMetrics) {
 
         window.as = window.as || {}, window.as.mvt = window.asMetrics.Mvt, window.as.Tracking = window.asMetrics.Tracking, window.Event = window.Event || {}, window.Event.onLoad = e => document.addEventListener("DOMContentLoaded", e), window.Event.onDomReady = e => document.addEventListener("DOMContentLoaded", e), document.addEventListener("DOMContentLoaded", (() => {
             window.performance.mark("jsx-buyflow-initrender-start"), s.mj(), i.mj(), u || (document.addEventListener("click", g), document.addEventListener("focusin", g), document.addEventListener("focusout", g), document.addEventListener("keydown", g), u = !0), x.init(), He();
