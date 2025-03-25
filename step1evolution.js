@@ -10261,10 +10261,7 @@
                 "use strict";
                 e.exports = React
             },
-            5206: e => {
-                "use strict";
-                e.exports = ReactDOM
-            },
+        
             2224: e => {
                 "use strict";
                 e.exports = _
