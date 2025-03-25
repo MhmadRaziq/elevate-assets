@@ -8953,7 +8953,7 @@
                     n = a.n(r);
                 const {
                     asMetrics: s
-                } = window, i = s.sba || {}, {
+                } = window, i = {}, {
                     OmnitureCollection: o,
                     OmnitureEvent: l
                 } = n().get(s, "util.omnitureCollection", {}), c = () => (n().get(window, "s.products", "").split(";")[0] || "").split(";")[0] || "", d = (e, t) => {
@@ -12003,8 +12003,11 @@
         const He = () => {
             _e.define()
         };
-       
-        
+        window.as = window.as || {}, window.as.mvt = window.asMetrics.Mvt, window.as.Tracking = window.asMetrics.Tracking, window.Event = window.Event || {}, window.Event.onLoad = e => document.addEventListener("DOMContentLoaded", e), window.Event.onDomReady = e => document.addEventListener("DOMContentLoaded", e), document.addEventListener("DOMContentLoaded", (() => {
+            window.performance.mark("jsx-buyflow-initrender-start"), s.mj(), i.mj(), u || (document.addEventListener("click", g), document.addEventListener("focusin", g), document.addEventListener("focusout", g), document.addEventListener("keydown", g), u = !0), x.init(), He();
+            const e = document.getElementById("as-noscript-header");
+            e && (e.innerHTML = "")
+        }));
         var Fe = l(5206),
             Ue = l.n(Fe),
             $e = l(8108),
