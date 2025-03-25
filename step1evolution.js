@@ -8944,214 +8944,214 @@
                 const s = "en-US",
                     i = e => e < n() ? n() : e
             },
-            2251: (e, t, a) => {
-                "use strict";
-                a.d(t, {
-                    A: () => m
-                });
-                var r = a(2224),
-                    n = a.n(r);
-                const s = window.asMetrics || {}; // Ensure asMetrics is defined
-                const i = s.sba || {}  ,{
-                    OmnitureCollection: o,
-                    OmnitureEvent: l
-                } = n().get(s, "util.omnitureCollection", {}), c = () => (n().get(window, "s.products", "").split(";")[0] || "").split(";")[0] || "", d = (e, t) => {
-                    if (!e.pickup) return "";
-                    const a = n().get(e, "pickup.stores", []).find((e => {
-                            let {
-                                selected: t
-                            } = e;
-                            return t
-                        })),
-                        r = a?.pickupMessage;
-                    if (!r) return n().get(t, "pickup_unavailable", "");
-                    if (!1 === r.storeSelectionEnabled) return [r.storePickupQuote, n().get(e, "pickup.availableMessageLink", "")].join(" - ");
-                    if (r?.storePickupQuote) {
-                        const e = r.storePickupQuote;
-                        return e.substring(0, e.indexOf("Apple"))
-                    }
-                    return ""
-                }, u = function(e, t) {
-                    let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                    if (!e || !t) return {};
-                    const r = n().get(t, "delivery", {}),
-                        s = n().get(r, "deliveryOptionMessages", []),
-                        i = s.length ? s.map((e => {
-                            let {
-                                displayName: t
-                            } = e;
-                            return t
-                        })) : [n().get(r, "orderByDeliveryBy", "")];
-                    return {
-                        sku: e,
-                        apuOptionName: d(t, a),
-                        deliveryDisplayName: i
-                    }
-                }, m = {
-                    impression: () => {
-                        const e = new o(new l("event341"));
-                        s.sendEvent({
-                            name: "sba|impression",
-                            beacon: {
-                                events: e.toString()
-                            }
-                        })
-                    },
-                    availabilityBannerLink: function() {
-                        let {
-                            element: e,
-                            action: t,
-                            originalPageName: a,
-                            product: r = {}
-                        } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                        i.onAvailablityBannerClicked && i.onAvailablityBannerClicked({
-                            element: e,
-                            action: t,
-                            originalPageName: a,
-                            product: r
-                        })
-                    },
-                    onSelectBtnClick: function() {
-                        let {
-                            quote: e,
-                            selectedElement: t,
-                            isInitialProduct: a,
-                            product: r = {},
-                            pageName: s,
-                            assets: o
-                        } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                        if (!i.onProductSelected) return;
-                        const l = { ...n().omit(u(r.partString, e, o), "sku"),
-                            selectedElement: t,
-                            pageName: s,
-                            isInitialProduct: a,
-                            product: r
-                        };
-                        i.onProductSelected(l)
-                    },
-                    onClose: e => {
-                        let {
-                            element: t,
-                            originalPageName: a
-                        } = e;
-                        i.onOverlayClosed && i.onOverlayClosed({
-                            element: t,
-                            originalPageName: a
-                        })
-                    },
-                    onEmptyResults: () => {
-                        const e = new o(new l("event321"));
-                        s.sendUserInteraction({
-                            name: "sba|result set",
-                            beacon: {
-                                eVar6: 'D=pageName+"|sba|results|no results returned"',
-                                events: e.toString()
-                            }
-                        })
-                    },
-                    showMoreOptions: () => {
-                        i.onShowMore && i.onShowMore()
-                    },
-                    pickupAvailableLink: e => {
-                        i.onPickupAvailableClicked && i.onPickupAvailableClicked({
-                            part: e,
-                            category: c()
-                        })
-                    },
-                    storeLocator: () => {
-                        i.onStoreSelected && i.onStoreSelected()
-                    },
-                    filterSelection: function() {
-                        let {
-                            selection: e,
-                            lastSelection: t
-                        } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                        i.onFilterSelection && i.onFilterSelection({
-                            selection: e,
-                            lastSelection: t
-                        })
-                    },
-                    filterBtnClick: function() {
-                        let {
-                            action: e
-                        } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                        i.onFilterSelectionMow && i.onFilterSelectionMow({
-                            action: e
-                        })
-                    },
-                    onShowMoreColors: e => {
-                        if (!i.onFilterShowMoreColors) return;
-                        const t = {
-                            watch_bands_dimensionBandColor: "band color",
-                            watch_bands_dimensionMaterial: "band type"
-                        }[e] || e;
-                        i.onFilterShowMoreColors({
-                            keyName: t
-                        })
-                    },
-                    onSort: e => {
-                        i.onSortApplied && i.onSortApplied({
-                            sortValue: e
-                        })
-                    },
-                    onReset: () => {
-                        i.onFilterReset && i.onFilterReset()
-                    },
-                    onProductsShown: function(e) {
-                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-                            a = arguments.length > 2 ? arguments[2] : void 0;
-                        if (!i.onProductsShown) return;
-                        const r = {
-                            storeId: "",
-                            miles: "",
-                            products: []
-                        };
-                        e.forEach(((e, s) => {
-                            let {
-                                partString: i
-                            } = e;
-                            const o = t[i];
-                            if (0 === s && o && o.pickup && (r.storeId = n().get(o, "pickup.storeId", ""), o.pickup.stores)) {
-                                const e = o.pickup.stores.find((e => {
-                                    let {
-                                        selected: t
-                                    } = e;
-                                    return t
-                                }));
-                                e && (r.miles = n().get(e, "pickupMessage.distance", ""))
-                            }
-                            r.products.push({ ...u(i, o, a),
-                                category: c()
-                            })
-                        })), i.onProductsShown(r)
-                    },
-                    onDateSelected: e => {
-                        i.onDateSelected && i.onDateSelected({
-                            date: e
-                        })
-                    },
-                    onExit: function() {
-                        let {
-                            preference: e,
-                            message: t
-                        } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                        const a = new o(new l("event388"));
-                        s.triggerPageHasLoaded({
-                            element: null,
-                            beacon: {
-                                events: a.toString(),
-                                eVar6: `D=pageName+"|Step 1|${e}|alert displayed"`,
-                                eVar25: t
-                            }
-                        })
-                    },
-                    onRecommendationIdChanged: e => {
-                        i.onRecommendationIdChanged && i.onRecommendationIdChanged({
-                            recommendationId: e
-                        })
-                    }
-                }
-            },
+            // 2251: (e, t, a) => {
+            //     "use strict";
+            //     a.d(t, {
+            //         A: () => m
+            //     });
+            //     var r = a(2224),
+            //         n = a.n(r);
+            //     const s = window.asMetrics || {}; // Ensure asMetrics is defined
+            //     const i = s.sba || {}  ,{
+            //         OmnitureCollection: o,
+            //         OmnitureEvent: l
+            //     } = n().get(s, "util.omnitureCollection", {}), c = () => (n().get(window, "s.products", "").split(";")[0] || "").split(";")[0] || "", d = (e, t) => {
+            //         if (!e.pickup) return "";
+            //         const a = n().get(e, "pickup.stores", []).find((e => {
+            //                 let {
+            //                     selected: t
+            //                 } = e;
+            //                 return t
+            //             })),
+            //             r = a?.pickupMessage;
+            //         if (!r) return n().get(t, "pickup_unavailable", "");
+            //         if (!1 === r.storeSelectionEnabled) return [r.storePickupQuote, n().get(e, "pickup.availableMessageLink", "")].join(" - ");
+            //         if (r?.storePickupQuote) {
+            //             const e = r.storePickupQuote;
+            //             return e.substring(0, e.indexOf("Apple"))
+            //         }
+            //         return ""
+            //     }, u = function(e, t) {
+            //         let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            //         if (!e || !t) return {};
+            //         const r = n().get(t, "delivery", {}),
+            //             s = n().get(r, "deliveryOptionMessages", []),
+            //             i = s.length ? s.map((e => {
+            //                 let {
+            //                     displayName: t
+            //                 } = e;
+            //                 return t
+            //             })) : [n().get(r, "orderByDeliveryBy", "")];
+            //         return {
+            //             sku: e,
+            //             apuOptionName: d(t, a),
+            //             deliveryDisplayName: i
+            //         }
+            //     }, m = {
+            //         impression: () => {
+            //             const e = new o(new l("event341"));
+            //             s.sendEvent({
+            //                 name: "sba|impression",
+            //                 beacon: {
+            //                     events: e.toString()
+            //                 }
+            //             })
+            //         },
+            //         availabilityBannerLink: function() {
+            //             let {
+            //                 element: e,
+            //                 action: t,
+            //                 originalPageName: a,
+            //                 product: r = {}
+            //             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+            //             i.onAvailablityBannerClicked && i.onAvailablityBannerClicked({
+            //                 element: e,
+            //                 action: t,
+            //                 originalPageName: a,
+            //                 product: r
+            //             })
+            //         },
+            //         onSelectBtnClick: function() {
+            //             let {
+            //                 quote: e,
+            //                 selectedElement: t,
+            //                 isInitialProduct: a,
+            //                 product: r = {},
+            //                 pageName: s,
+            //                 assets: o
+            //             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+            //             if (!i.onProductSelected) return;
+            //             const l = { ...n().omit(u(r.partString, e, o), "sku"),
+            //                 selectedElement: t,
+            //                 pageName: s,
+            //                 isInitialProduct: a,
+            //                 product: r
+            //             };
+            //             i.onProductSelected(l)
+            //         },
+            //         onClose: e => {
+            //             let {
+            //                 element: t,
+            //                 originalPageName: a
+            //             } = e;
+            //             i.onOverlayClosed && i.onOverlayClosed({
+            //                 element: t,
+            //                 originalPageName: a
+            //             })
+            //         },
+            //         onEmptyResults: () => {
+            //             const e = new o(new l("event321"));
+            //             s.sendUserInteraction({
+            //                 name: "sba|result set",
+            //                 beacon: {
+            //                     eVar6: 'D=pageName+"|sba|results|no results returned"',
+            //                     events: e.toString()
+            //                 }
+            //             })
+            //         },
+            //         showMoreOptions: () => {
+            //             i.onShowMore && i.onShowMore()
+            //         },
+            //         pickupAvailableLink: e => {
+            //             i.onPickupAvailableClicked && i.onPickupAvailableClicked({
+            //                 part: e,
+            //                 category: c()
+            //             })
+            //         },
+            //         storeLocator: () => {
+            //             i.onStoreSelected && i.onStoreSelected()
+            //         },
+            //         filterSelection: function() {
+            //             let {
+            //                 selection: e,
+            //                 lastSelection: t
+            //             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+            //             i.onFilterSelection && i.onFilterSelection({
+            //                 selection: e,
+            //                 lastSelection: t
+            //             })
+            //         },
+            //         filterBtnClick: function() {
+            //             let {
+            //                 action: e
+            //             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+            //             i.onFilterSelectionMow && i.onFilterSelectionMow({
+            //                 action: e
+            //             })
+            //         },
+            //         onShowMoreColors: e => {
+            //             if (!i.onFilterShowMoreColors) return;
+            //             const t = {
+            //                 watch_bands_dimensionBandColor: "band color",
+            //                 watch_bands_dimensionMaterial: "band type"
+            //             }[e] || e;
+            //             i.onFilterShowMoreColors({
+            //                 keyName: t
+            //             })
+            //         },
+            //         onSort: e => {
+            //             i.onSortApplied && i.onSortApplied({
+            //                 sortValue: e
+            //             })
+            //         },
+            //         onReset: () => {
+            //             i.onFilterReset && i.onFilterReset()
+            //         },
+            //         onProductsShown: function(e) {
+            //             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+            //                 a = arguments.length > 2 ? arguments[2] : void 0;
+            //             if (!i.onProductsShown) return;
+            //             const r = {
+            //                 storeId: "",
+            //                 miles: "",
+            //                 products: []
+            //             };
+            //             e.forEach(((e, s) => {
+            //                 let {
+            //                     partString: i
+            //                 } = e;
+            //                 const o = t[i];
+            //                 if (0 === s && o && o.pickup && (r.storeId = n().get(o, "pickup.storeId", ""), o.pickup.stores)) {
+            //                     const e = o.pickup.stores.find((e => {
+            //                         let {
+            //                             selected: t
+            //                         } = e;
+            //                         return t
+            //                     }));
+            //                     e && (r.miles = n().get(e, "pickupMessage.distance", ""))
+            //                 }
+            //                 r.products.push({ ...u(i, o, a),
+            //                     category: c()
+            //                 })
+            //             })), i.onProductsShown(r)
+            //         },
+            //         onDateSelected: e => {
+            //             i.onDateSelected && i.onDateSelected({
+            //                 date: e
+            //             })
+            //         },
+            //         onExit: function() {
+            //             let {
+            //                 preference: e,
+            //                 message: t
+            //             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+            //             const a = new o(new l("event388"));
+            //             s.triggerPageHasLoaded({
+            //                 element: null,
+            //                 beacon: {
+            //                     events: a.toString(),
+            //                     eVar6: `D=pageName+"|Step 1|${e}|alert displayed"`,
+            //                     eVar25: t
+            //                 }
+            //             })
+            //         },
+            //         onRecommendationIdChanged: e => {
+            //             i.onRecommendationIdChanged && i.onRecommendationIdChanged({
+            //                 recommendationId: e
+            //             })
+            //         }
+            //     }
+            // },
             2643: (e, t, a) => {
                 "use strict";
                 a.d(t, {
@@ -13257,8 +13257,7 @@
         function ra(e, t) {
             return +(0, aa.a)(e) == +(0, aa.a)(t)
         }
-        var na = l(2251),
-            sa = l(2643);
+        var sa = l(2643);
         const ia = 6e4,
             oa = "FETCH_ENTRY",
             la = "FETCH_RECOMMENDATIONS",
@@ -13365,7 +13364,7 @@
                             productMeta: t,
                             namedTextAssets: a
                         } = e.body || {}, s = n().get(t, "identifiers.recommendationId");
-                        s && na.A.onRecommendationIdChanged(s);
+                        s;
                         const i = n().get(t, "products", []).length > 0;
                         if (t && i) {
                             const {
@@ -13633,7 +13632,7 @@
                                 selection: t,
                                 getByDate: s
                             }), o = (0, sa.Br)(s, i);
-                            return n().isEmpty(i) && na.A.onEmptyResults(), { ...e,
+                            return n().isEmpty(i) , { ...e,
                                 recommendations: i,
                                 visibleCount: 5,
                                 selection: t,
@@ -13646,7 +13645,7 @@
                             const t = Math.min(e.recommendations.length - e.visibleCount, 5),
                                 a = e.visibleCount + t;
                             return setTimeout((() => {
-                                na.A.showMoreOptions()
+                               
                             }), 0), { ...e,
                                 visibleCount: a
                             }
@@ -13674,13 +13673,7 @@
                                     part: n().get(e, "originalProduct.partNumber"),
                                     store: i
                                 }), d && t.productUrl) {
-                                const a = n().get(t, "updatedMessage", !1);
-                                return window.sessionStorage.setItem("showCrossBuyflowSBANotifications", a), na.A.onExit({
-                                    preference: `${t.productName} - ${t.description}`,
-                                    message: t.updatedMessage
-                                }), setTimeout((() => {
-                                    window.location.href = t.productUrl
-                                }), 1e3), e
+                             
                             }
                             return a(t, o), e
                         }(e, t.product, t.onSelection, t.fulfillment);
@@ -13777,7 +13770,7 @@
                                 o = { ...e.originalProduct,
                                     availabilityDate: n().get(i, `${e.originalProduct.partString}.availabilityDate`)
                                 };
-                            return e.productData.products.length === Object.keys(i).length - 1 && na.A.onProductsShown([e.originalProduct, ...s], i, e.assets), { ...e,
+                            return e.productData.products.length === Object.keys(i).length - 1 , { ...e,
                                 originalProduct: o,
                                 quotes: i,
                                 recommendations: s,
@@ -13808,13 +13801,7 @@
                                     locale: a
                                 }) : "",
                                 l = (0, sa.Br)(s, i);
-                            return na.A.onDateSelected(t), { ...e,
-                                getByDate: s,
-                                getByDateText: o,
-                                recommendations: i,
-                                enabledDimensions: l,
-                                visibleCount: 5
-                            }
+                            return {}
                         })(e, t.newDate, t.locale);
                     case va:
                         return (e => {
@@ -13942,7 +13929,7 @@
                     }), e.signal), () => {
                         e.abort()
                     }
-                }), [r, o, C, k]), !P.current && n().get(p, "isEnabled", !1) && (P.current = !0, na.A.impression());
+                }), [r, o, C, k]), !P.current && n().get(p, "isEnabled", !1) && (P.current = !0);
                 const _ = {
                     bannerState: p,
                     handleBannerClick: (e, t) => {
@@ -13951,16 +13938,7 @@
                                 let {
                                     target: t
                                 } = e;
-                                R.fetchRecommendations(L, T), S(!0), na.A.availabilityBannerLink({
-                                    element: t,
-                                    action: E ? `${a}See faster options again` : `${a}See what else is available`,
-                                    originalPageName: N.current,
-                                    product: {
-                                        partNumber: r,
-                                        cppart: s,
-                                        options: i
-                                    }
-                                }), setTimeout((() => h(!0)), 3e3)
+                                R.fetchRecommendations(L, T), S(!0), setTimeout((() => h(!0)), 3e3)
                             };
                         w.current = e.target, v ? n(e) : (b(!0), setTimeout((() => {
                             n(e)
@@ -13979,10 +13957,7 @@
                         } = e;
                         if ("keydown" === a && O.current) {
                             O.current.querySelector("button.rc-overlay-close").click()
-                        } else S(!1), na.A.onClose({
-                            target: t,
-                            originalPageName: N.current
-                        }), R.onReset()
+                        } else S(!1), R.onReset()
                     },
                     closeButtonAttrs: {
                         "data-analytics-region": "modal",
