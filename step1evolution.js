@@ -8951,9 +8951,8 @@
                 });
                 var r = a(2224),
                     n = a.n(r);
-                const {
-                    asMetrics: s
-                } = window, i = s.sba || {}, {
+                const s = window.asMetrics || {}; // Ensure asMetrics is defined
+                const i = s.sba || {}  ,{
                     OmnitureCollection: o,
                     OmnitureEvent: l
                 } = n().get(s, "util.omnitureCollection", {}), c = () => (n().get(window, "s.products", "").split(";")[0] || "").split(";")[0] || "", d = (e, t) => {
