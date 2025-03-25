@@ -11675,27 +11675,27 @@
                         })(e, a, t), z(r, t, a, e), J(r, a, e, !0))
                     }
                 }))
-            },
-            Z = n().debounce((e => {
-                const t = e?.target;
-                let a = null;
-                if (t?.hasAttribute($) ? a = t : t?.parentNode?.hasAttribute?.($) && (a = t.parentNode), a) {
-                    e.preventDefault();
-                    const r = t.closest(`[${F}]`);
-                    if (r) {
-                        const e = r.querySelector(`[${U}]`),
-                            t = [...r.querySelectorAll(`[${$}]`)];
-                        a && (z(a, t, e, r), J(a, e, r))
-                    }
-                }
-            }), 300);
-        window.addEventListener("click", (e => {
-            Z(e)
-        })), window.addEventListener("keydown", (e => {
-            e.keyCode === o.HP.Space && Z(e)
-        })), window.addEventListener("DOMContentLoaded", (() => {
-            Q(document)
-        }));
+            }
+            // Z = n().debounce((e => {
+            //     const t = e?.target;
+            //     let a = null;
+            //     if (t?.hasAttribute($) ? a = t : t?.parentNode?.hasAttribute?.($) && (a = t.parentNode), a) {
+            //         e.preventDefault();
+            //         const r = t.closest(`[${F}]`);
+            //         if (r) {
+            //             const e = r.querySelector(`[${U}]`),
+            //                 t = [...r.querySelectorAll(`[${$}]`)];
+            //             a && (z(a, t, e, r), J(a, e, r))
+            //         }
+            //     }
+            // }), 300);
+        // window.addEventListener("click", (e => {
+        //     Z(e)
+        // })), window.addEventListener("keydown", (e => {
+        //     e.keyCode === o.HP.Space && Z(e)
+        // })), window.addEventListener("DOMContentLoaded", (() => {
+        //     Q(document)
+        // }));
         const ee = "data-dcm-switcher",
             te = "data-dcm-switcher-class",
             ae = "data-dcm-switcher-selected",
