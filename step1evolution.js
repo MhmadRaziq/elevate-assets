@@ -21291,7 +21291,7 @@
                     N = $o((() => Uo(i.current)));
                 return (0, Ye.A)("resize", N), t().useEffect((() => {
                     (async () => {
-                        (await l.e(5607).then(l.t.bind(l, 5607, 23))).detect()
+                        // (await l.e(5607).then(l.t.bind(l, 5607, 23))).detect()
                     })()
                 }), []), t().useLayoutEffect((() => {
                     w && (o || d ? !o && n().isEqual(m, a) ? u(!1) : o ? n().isEqual(g, a) ? c(!1) : (f(a), E.current = !0) : (p(a), y.current = !0) : (p(a), y.current = !0, setTimeout((() => {
