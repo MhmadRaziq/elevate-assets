@@ -11186,7 +11186,6 @@
         7058: "accessory-component9",
         7151: "accessory-slot-component5",
         7226: "accessory-component14",
-        7560: "dude-overlay",
         7711: "lazy-engraving",
         7723: "lazy-tradeup",
         7811: "accessory-component15",
@@ -11228,7 +11227,6 @@
         6081: "accessory-component2",
         7058: "accessory-component9",
         7226: "accessory-component14",
-        7560: "dude-overlay",
         7711: "lazy-engraving",
         7723: "lazy-tradeup",
         7811: "accessory-component15",
@@ -11351,7 +11349,6 @@
                     6081: 1,
                     7058: 1,
                     7226: 1,
-                    7560: 1,
                     7711: 1,
                     7723: 1,
                     7770: 1,
@@ -11432,7 +11429,7 @@
         var t = s[e];
         Array.isArray(t) && t.map(l.E)
     })), l.O(0, [933], (() => {
-        [9704, 7560, 2834, 892, 9762].map(l.E)
+        [9704, 2834, 892, 9762].map(l.E)
     }), 5);
     var c = {};
     (() => {
@@ -16854,7 +16851,7 @@
                     disabled: r
                 }))
             },
-            Jn = t().lazy((() => Promise.all([l.e(9704), l.e(7560)]).then(l.bind(l, 8971)))),
+            Jn = t().lazy((() => Promise.all([l.e(9704)]).then(l.bind(l, 8971)))),
             Qn = t().lazy((() => Promise.all([l.e(2834), l.e(892)]).then(l.bind(l, 3075)))),
             Zn = t().lazy((() => Promise.all([l.e(2834), l.e(9762)]).then(l.bind(l, 5944)))),
             es = e => {
