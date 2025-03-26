@@ -21443,81 +21443,53 @@
                 CACHE_KEY: Jo,
                 DEFAULT_KEY: Qo
             } = lr,
-            // Zo = t => {
-            //     let {
-            //         selectionArea: a
-            //     } = t;
-            //     const {
-            //         viewport: r
-            //     } = (0, Be.S)(), s = (0, e.useRef)(!0), i = n().get(a, "activeStep", {}), o = n().get(a, "focusedStep"), l = n().get(a, "forceGalleryUpdate"), c = n().get(a, `moduleState.${o}.selectedGroupKey`), d = c ? n().get(a, `moduleState.${o}.selectedGroupVal`) : null, u = "small" === r ? n().get(a, "accessorySelection", {}) : null, [m, p] = (0, e.useState)([]), g = i ? JSON.stringify(i) : "", f = n().get(a, "selection", {}), y = n().get(a, "productSelection.state.selectionImage", {}), E = n().get(a, "kitProduct.vq.partNumber") || n().get(a, "kitProduct.vq.vq"), h = E || d, v = E ? "vq" : null, b = n().get(window.NAMED_ASSETS, "disableAutoScroll", !1) ? JSON.stringify(f) : "";
-            //     (0, e.useEffect)((() => {
-            //         const e = n().get(window, `${lr.CACHE_KEY}.productGalleryUrl`);
-            //         if (e) {
-            //             const t = n().get(a, "productSelection.state.dimensions", []);
-            //             let r = o || n().get(t, "[0].key");
-            //             if (c) {
-            //                 n().get(window, `${Jo}.productGalleryData.${c}.${Qo}`) && (r = c)
-            //             }
-            //             const d = jo(r, f, h),
-            //                 m = {
-            //                     selection: f,
-            //                     step: r,
-            //                     stepValue: n().get(i, r),
-            //                     selectionImage: y,
-            //                     key: d,
-            //                     addonStep: v,
-            //                     addonPart: h
-            //                 };
-            //             s.current && u && (m.accSelection = u), Xo(e, m, l).then((e => {
-            //                 p(e), s.current = !1
-            //             }))
-            //         }
-            //     }), [g, o, c, l, b, h]);
-            //     return {
-            //         galleryItems: m,
-            //         hasGalleryItems: n().get(m, "length") > 0,
-            //         getGalleryItemsForStep: (e, t, a, r) => {
-            //             let s = e;
-            //             if (t) {
-            //                 n().get(window, `${Jo}.productGalleryData.${t}.${Qo}`) && (s = t)
-            //             }
-            //             const i = a ? lr.DEFAULT_KEY : jo(s, f, r),
-            //                 {
-            //                     items: o
-            //                 } = zo(t || s, i);
-            //             return o
-            //         }
-            //     }
-            // };
             Zo = t => {
-                // Remove most of the selection-related logic
-                const [m, p] = (0, e.useState)([]);
-                
-                (0, e.useEffect)(() => {
+                let {
+                    selectionArea: a
+                } = t;
+                const {
+                    viewport: r
+                } = (0, Be.S)(), s = (0, e.useRef)(!0), i = n().get(a, "activeStep", {}), o = n().get(a, "focusedStep"), l = n().get(a, "forceGalleryUpdate"), c = n().get(a, `moduleState.${o}.selectedGroupKey`), d = c ? n().get(a, `moduleState.${o}.selectedGroupVal`) : null, u = "small" === r ? n().get(a, "accessorySelection", {}) : null, [m, p] = (0, e.useState)([]), g = i ? JSON.stringify(i) : "", f = n().get(a, "selection", {}), y = n().get(a, "productSelection.state.selectionImage", {}), E = n().get(a, "kitProduct.vq.partNumber") || n().get(a, "kitProduct.vq.vq"), h = E || d, v = E ? "vq" : null, b = n().get(window.NAMED_ASSETS, "disableAutoScroll", !1) ? JSON.stringify(f) : "";
+                (0, e.useEffect)((() => {
                     const e = n().get(window, `${lr.CACHE_KEY}.productGalleryUrl`);
                     if (e) {
-                        // Simplified request object - remove all selection parameters
-                        const m = {
-                            key: 'static' // Just use a static key
-                        };
-                        
-                        Xo(e, m).then((data) => {
-                            p(data);
-                        });
+                        const t = n().get(a, "productSelection.state.dimensions", []);
+                        let r = o || n().get(t, "[0].key");
+                        if (c) {
+                            n().get(window, `${Jo}.productGalleryData.${c}.${Qo}`) && (r = c)
+                        }
+                        const d = jo(r, f, h),
+                            m = {
+                                selection: f,
+                                step: r,
+                                stepValue: n().get(i, r),
+                                selectionImage: y,
+                                key: d,
+                                addonStep: v,
+                                addonPart: h
+                            };
+                        s.current && u && (m.accSelection = u), Xo(e, m, l).then((e => {
+                            p(e), s.current = !1
+                        }))
                     }
-                }, []); // Empty dependency array means this runs once on mount
-            
+                }), [g, o, c, l, b, h]);
                 return {
                     galleryItems: m,
                     hasGalleryItems: n().get(m, "length") > 0,
-                    getGalleryItemsForStep: () => {
-                        // Return all items regardless of step/selection
-                        return m;
+                    getGalleryItemsForStep: (e, t, a, r) => {
+                        let s = e;
+                        if (t) {
+                            n().get(window, `${Jo}.productGalleryData.${t}.${Qo}`) && (s = t)
+                        }
+                        const i = a ? lr.DEFAULT_KEY : jo(s, f, r),
+                            {
+                                items: o
+                            } = zo(t || s, i);
+                        return o
                     }
-                };
+                }
             };
-       
-            var el = l(1855);
+        var el = l(1855);
         const tl = t().forwardRef(((e, a) => {
                 let {
                     className: r,
