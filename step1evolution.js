@@ -15136,200 +15136,251 @@
             //         disabled: S
             //     })) : null)
             // },
+            // const Yr = (e, a) => {
+            //     let {
+            //         dimension: r,
+            //         gallery: s,
+            //         onChange: i,
+            //         onLayout: o = n().noop,
+            //         className: l,
+            //         downPaymentFull: c,
+            //         disabled: d
+            //     } = e;
+            
+            //     const { viewport: u } = (0, Be.S)(),
+            //         m = "small" === u,
+            //         p = r.view === or.FULL_WIDTH || "dimensionScreensize" === r.key,
+            //         g = r.view === or.COLOR_NAV,
+            //         isPackSize = r.key === "dimensionPackSize",
+            //         [f, y] = t().useState(),
+            //         E = n().get(window.decisionSection, r.key),
+            //         h = n().get(r, "chooseShortPrice"),
+            //         v = e => i(r.key, e),
+            //         b = Boolean(r.value),
+            //         A = Boolean(r.options.find(e => e.productMessage || e.violator)),
+            //         S = r.disabled || d,
+            //         w = r.showDisabledSelectors || window?.NAMED_ASSETS?.showDisabledSelectors ? r.options : r.options.filter(e => !e.disabled);
+            
+            //     t().useLayoutEffect(o, [o]);
+            
+            //     return t().createElement("div", {
+            //         className: qe()(l, "rf-bfe-dimension", `rf-bfe-dimension-${r.key.toLowerCase()}`),
+            //         "data-analytics-section": r.key,
+            //         "data-step-enabled": !S || void 0,
+            //         "data-step-complete": b,
+            //         "data-observer-key": r.key,
+            //         ref: a
+            //     },
+            
+            //         // -------- PACK SIZE --------
+            //         isPackSize ? t().createElement(_r.c6, {
+            //             legend: t().createElement(Ur, { dimension: r }),
+            //             disabled: S,
+            //             withGutters: !p,
+            //             className: qe()("rf-bfe-product-dimension-group"),
+            //             childAfterLegend: t().createElement(t().Fragment, null, t().createElement(Br, { dimension: r }), m && s),
+            //             classes: { items: { "rf-bfe-step-disabled": S } }
+            //         },
+            //             w.map(e => t().createElement(_r.sY, {
+            //                 key: e.value,
+            //                 name: r.key,
+            //                 value: e.value,
+            //                 checked: e.value === r.value,
+            //                 handleChange: v,
+            //                 threeLine: !0,
+            //                 skipChangeSelection: !0,
+            //                 disabled: S || e.disabled,
+            //                 "data-autom": `${r.key}${e.value}`,
+            //                 withAriaLabeledBy: !0
+            //             },
+            //                 (e.productMessage || e.violator) && t().createElement(Rr.A, (0, Ce.A)({
+            //                     className: qe()({
+            //                         "rf-bfe-coming-soon-violator": e.productMessage
+            //                     }),
+            //                     noScrim: !0,
+            //                     reduced: !0
+            //                 }, (0, Ie.OH)(e.productMessage || e.violator))),
+            //                 t().createElement(_r._V, { text: e.text }),
+            //                 t().createElement(_r.ED, { "data-autom": `price${r.key}${e.value}`, text: Hr(e) })
+            //             ))
+            //         ) :
+            
+            //         // -------- COLOR NAV --------
+            //         g ? t().createElement(_r.ee, {
+            //             key: r.key,
+            //             legend: t().createElement(Ur, { dimension: r }),
+            //             className: "rf-bfe-product-dimension-group",
+            //             disabled: S,
+            //             childAfterLegend: t().createElement(t().Fragment, null,
+            //                 t().createElement(Br, { dimension: r }),
+            //                 m && s,
+            //                 t().createElement($r, { dimension: r, colorHover: f })
+            //             ),
+            //             classes: { items: { "rf-colornav-items-with-violator": A, "rf-bfe-step-disabled": S } }
+            //         },
+            //             w.map(e => t().createElement(_r.aU, {
+            //                 name: r.key,
+            //                 value: e.value,
+            //                 key: e.value,
+            //                 text: e.text,
+            //                 isProductRed: "product_red" === e.value,
+            //                 classes: {
+            //                     label: "rf-bfe-product-dimension-colornav-label",
+            //                     input: "rf-bfe-product-dimension-colornav-input"
+            //                 },
+            //                 badgeText: e.productMessage || e.violator,
+            //                 image: e.image,
+            //                 handleChange: v,
+            //                 skipChangeSelection: !0,
+            //                 checked: e.value === r.value,
+            //                 disabled: S || e.disabled,
+            //                 "data-autom": `${r.key}${e.value}`,
+            //                 labelAttrs: {
+            //                     onMouseEnter: Vr.touch ? void 0 : () => y(e.text),
+            //                     onMouseLeave: Vr.touch ? void 0 : () => y()
+            //                 }
+            //             }))
+            //         ) :
+            
+            //         // -------- NORMAL DIMENSION --------
+            //         t().createElement(_r.c6, {
+            //             legend: t().createElement(Ur, { dimension: r }),
+            //             disabled: S,
+            //             withGutters: !p,
+            //             className: qe()("rf-bfe-product-dimension-group"),
+            //             childAfterLegend: t().createElement(t().Fragment, null, t().createElement(Br, { dimension: r }), m && s),
+            //             classes: { items: { "rf-bfe-step-disabled": S } }
+            //         },
+            //             w.map(e => p ? t().createElement(_r.gW, {
+            //                 key: e.value,
+            //                 name: r.key,
+            //                 value: e.value,
+            //                 checked: e.value === r.value,
+            //                 handleChange: v,
+            //                 skipChangeSelection: !0,
+            //                 disabled: S || e.disabled,
+            //                 "data-autom": `${r.key}${e.value}`,
+            //                 withAriaLabeledBy: !0,
+            //                 render: a => {
+            //                     let { SelectorLabel: n } = a;
+            //                     return t().createElement(n, null,
+            //                         t().createElement("span", { className: "row" },
+            //                             t().createElement("span", { className: qe()("column", "form-selector-left-col", "rf-bfe-selector-left-col") },
+            //                                 (e.productMessage || e.violator) && t().createElement(Rr.A, (0, Ce.A)({
+            //                                     className: qe()({ "rf-bfe-coming-soon-violator": e.productMessage }),
+            //                                     noScrim: !0, reduced: !0
+            //                                 }, (0, Ie.OH)(e.productMessage || e.violator))),
+            //                                 t().createElement(_r._V, { text: e.text })
+            //                             ),
+            //                             t().createElement("span", { className: qe()("column", "form-selector-right-col", "rf-bfe-selector-right-col") },
+            //                                 t().createElement(_r.ED, { "data-autom": `price${r.key}${e.value}`, text: Hr(e, !1, !1, { chooseShortPrice: h }) })
+            //                             )
+            //                         ),
+            //                         e.subText && t().createElement(_r.ED, { className: "rf-bfe-selector-subtext", text: e.subText })
+            //                     )
+            //                 }
+            //             }) :
+            //                 r.view === or.WITH_SWATCH ? t().createElement(_r.sY, {
+            //                     key: e.value,
+            //                     name: r.key,
+            //                     value: e.value,
+            //                     checked: e.value === r.value,
+            //                     handleChange: v,
+            //                     showSwatch: !0,
+            //                     skipChangeSelection: !0,
+            //                     disabled: S || e.disabled,
+            //                     "data-autom": `${r.key}${e.value}`
+            //                 },
+            //                     e.productMessage && t().createElement(Rr.A, (0, Ce.A)({
+            //                         className: "rf-bfe-coming-soon-violator",
+            //                         noScrim: !0,
+            //                         reduced: !0
+            //                     }, (0, Ie.OH)(e.productMessage))),
+            //                     t().createElement(_r.rp, { image: e.image, imageProps: { "aria-hidden": "true" } }),
+            //                     t().createElement(_r.ED, { text: e.text })
+            //                 ) :
+            //                 t().createElement(_r.sY, {
+            //                     key: e.value,
+            //                     name: r.key,
+            //                     value: e.value,
+            //                     checked: e.value === r.value,
+            //                     handleChange: v,
+            //                     threeLine: !0,
+            //                     skipChangeSelection: !0,
+            //                     disabled: S || e.disabled,
+            //                     "data-autom": `${r.key}${e.value}`,
+            //                     withAriaLabeledBy: !0
+            //                 },
+            //                     (e.productMessage || e.violator) && t().createElement(Rr.A, (0, Ce.A)({
+            //                         className: qe()({ "rf-bfe-coming-soon-violator": e.productMessage }),
+            //                         noScrim: !0,
+            //                         reduced: !0
+            //                     }, (0, Ie.OH)(e.productMessage || e.violator))),
+            //                     t().createElement(_r._V, { text: e.text }),
+            //                     t().createElement(_r.ED, { "data-autom": `price${r.key}${e.value}`, text: Hr(e) })
+            //                 )
+            //             )
+            //         ),
+            
+            //         c && "dimensionColor" !== r.key && t().createElement("div", (0, Ce.A)({
+            //             className: `rf-bfe-dimension-downpaymentfull ${ze.A.CAPTION}`
+            //         }, (0, Ie.OH)(c))),
+            //         r.footer && t().createElement(Ba.A, { disabled: S },
+            //             t().createElement(_.Typography, { component: "div", variant: "body4", color: "textPrimary", dangerouslySetInnerHTML: { __html: r.footer } })
+            //         )
+            //     );
+            // },       
+               
              Yr = (e, a) => {
-                let {
-                    dimension: r,
-                    gallery: s,
-                    onChange: i,
-                    onLayout: o = n().noop,
-                    className: l,
-                    downPaymentFull: c,
-                    disabled: d
-                } = e;
+                const i = a.dimensionKey,
+                      o = e.displayValues[i],
+                      r = o.variantOrder;
             
-                const { viewport: u } = (0, Be.S)(),
-                    m = "small" === u,
-                    p = r.view === or.FULL_WIDTH || "dimensionScreensize" === r.key,
-                    g = r.view === or.COLOR_NAV,
-                    isPackSize = r.key === "dimensionPackSize",
-                    [f, y] = t().useState(),
-                    E = n().get(window.decisionSection, r.key),
-                    h = n().get(r, "chooseShortPrice"),
-                    v = e => i(r.key, e),
-                    b = Boolean(r.value),
-                    A = Boolean(r.options.find(e => e.productMessage || e.violator)),
-                    S = r.disabled || d,
-                    w = r.showDisabledSelectors || window?.NAMED_ASSETS?.showDisabledSelectors ? r.options : r.options.filter(e => !e.disabled);
+                const container = document.createElement("div");
+                container.className = "rs-dimension-selector"; // make sure this matches your CSS
             
-                t().useLayoutEffect(o, [o]);
+                r.forEach(variantKey => {
+                    const variant = o[variantKey];
+                    if (!variant) return;
             
-                return t().createElement("div", {
-                    className: qe()(l, "rf-bfe-dimension", `rf-bfe-dimension-${r.key.toLowerCase()}`),
-                    "data-analytics-section": r.key,
-                    "data-step-enabled": !S || void 0,
-                    "data-step-complete": b,
-                    "data-observer-key": r.key,
-                    ref: a
-                },
+                    const btn = document.createElement("button");
+                    btn.type = "button";
+                    btn.className = "rs-step1modular-dimensionbtn";
+                    btn.setAttribute("data-attr", i);
+                    btn.setAttribute("data-value", variantKey);
+                    btn.setAttribute("aria-pressed", "false");
             
-                    // -------- PACK SIZE --------
-                    isPackSize ? t().createElement(_r.c6, {
-                        legend: t().createElement(Ur, { dimension: r }),
-                        disabled: S,
-                        withGutters: !p,
-                        className: qe()("rf-bfe-product-dimension-group"),
-                        childAfterLegend: t().createElement(t().Fragment, null, t().createElement(Br, { dimension: r }), m && s),
-                        classes: { items: { "rf-bfe-step-disabled": S } }
-                    },
-                        w.map(e => t().createElement(_r.sY, {
-                            key: e.value,
-                            name: r.key,
-                            value: e.value,
-                            checked: e.value === r.value,
-                            handleChange: v,
-                            threeLine: !0,
-                            skipChangeSelection: !0,
-                            disabled: S || e.disabled,
-                            "data-autom": `${r.key}${e.value}`,
-                            withAriaLabeledBy: !0
-                        },
-                            (e.productMessage || e.violator) && t().createElement(Rr.A, (0, Ce.A)({
-                                className: qe()({
-                                    "rf-bfe-coming-soon-violator": e.productMessage
-                                }),
-                                noScrim: !0,
-                                reduced: !0
-                            }, (0, Ie.OH)(e.productMessage || e.violator))),
-                            t().createElement(_r._V, { text: e.text }),
-                            t().createElement(_r.ED, { "data-autom": `price${r.key}${e.value}`, text: Hr(e) })
-                        ))
-                    ) :
+                    // Label / Text
+                    const labelDiv = document.createElement("div");
+                    labelDiv.className = "rs-step1modular-label";
+                    labelDiv.innerHTML = variant.value; // Will include spans like in Reputation Pro
             
-                    // -------- COLOR NAV --------
-                    g ? t().createElement(_r.ee, {
-                        key: r.key,
-                        legend: t().createElement(Ur, { dimension: r }),
-                        className: "rf-bfe-product-dimension-group",
-                        disabled: S,
-                        childAfterLegend: t().createElement(t().Fragment, null,
-                            t().createElement(Br, { dimension: r }),
-                            m && s,
-                            t().createElement($r, { dimension: r, colorHover: f })
-                        ),
-                        classes: { items: { "rf-colornav-items-with-violator": A, "rf-bfe-step-disabled": S } }
-                    },
-                        w.map(e => t().createElement(_r.aU, {
-                            name: r.key,
-                            value: e.value,
-                            key: e.value,
-                            text: e.text,
-                            isProductRed: "product_red" === e.value,
-                            classes: {
-                                label: "rf-bfe-product-dimension-colornav-label",
-                                input: "rf-bfe-product-dimension-colornav-input"
-                            },
-                            badgeText: e.productMessage || e.violator,
-                            image: e.image,
-                            handleChange: v,
-                            skipChangeSelection: !0,
-                            checked: e.value === r.value,
-                            disabled: S || e.disabled,
-                            "data-autom": `${r.key}${e.value}`,
-                            labelAttrs: {
-                                onMouseEnter: Vr.touch ? void 0 : () => y(e.text),
-                                onMouseLeave: Vr.touch ? void 0 : () => y()
-                            }
-                        }))
-                    ) :
+                    // Image (Optional)
+                    if (variant.image) {
+                        const imageDiv = document.createElement("div");
+                        imageDiv.className = "rs-step1modular-image";
+                        imageDiv.innerHTML = variant.image;
+                        btn.appendChild(imageDiv);
+                    }
             
-                    // -------- NORMAL DIMENSION --------
-                    t().createElement(_r.c6, {
-                        legend: t().createElement(Ur, { dimension: r }),
-                        disabled: S,
-                        withGutters: !p,
-                        className: qe()("rf-bfe-product-dimension-group"),
-                        childAfterLegend: t().createElement(t().Fragment, null, t().createElement(Br, { dimension: r }), m && s),
-                        classes: { items: { "rf-bfe-step-disabled": S } }
-                    },
-                        w.map(e => p ? t().createElement(_r.gW, {
-                            key: e.value,
-                            name: r.key,
-                            value: e.value,
-                            checked: e.value === r.value,
-                            handleChange: v,
-                            skipChangeSelection: !0,
-                            disabled: S || e.disabled,
-                            "data-autom": `${r.key}${e.value}`,
-                            withAriaLabeledBy: !0,
-                            render: a => {
-                                let { SelectorLabel: n } = a;
-                                return t().createElement(n, null,
-                                    t().createElement("span", { className: "row" },
-                                        t().createElement("span", { className: qe()("column", "form-selector-left-col", "rf-bfe-selector-left-col") },
-                                            (e.productMessage || e.violator) && t().createElement(Rr.A, (0, Ce.A)({
-                                                className: qe()({ "rf-bfe-coming-soon-violator": e.productMessage }),
-                                                noScrim: !0, reduced: !0
-                                            }, (0, Ie.OH)(e.productMessage || e.violator))),
-                                            t().createElement(_r._V, { text: e.text })
-                                        ),
-                                        t().createElement("span", { className: qe()("column", "form-selector-right-col", "rf-bfe-selector-right-col") },
-                                            t().createElement(_r.ED, { "data-autom": `price${r.key}${e.value}`, text: Hr(e, !1, !1, { chooseShortPrice: h }) })
-                                        )
-                                    ),
-                                    e.subText && t().createElement(_r.ED, { className: "rf-bfe-selector-subtext", text: e.subText })
-                                )
-                            }
-                        }) :
-                            r.view === or.WITH_SWATCH ? t().createElement(_r.sY, {
-                                key: e.value,
-                                name: r.key,
-                                value: e.value,
-                                checked: e.value === r.value,
-                                handleChange: v,
-                                showSwatch: !0,
-                                skipChangeSelection: !0,
-                                disabled: S || e.disabled,
-                                "data-autom": `${r.key}${e.value}`
-                            },
-                                e.productMessage && t().createElement(Rr.A, (0, Ce.A)({
-                                    className: "rf-bfe-coming-soon-violator",
-                                    noScrim: !0,
-                                    reduced: !0
-                                }, (0, Ie.OH)(e.productMessage))),
-                                t().createElement(_r.rp, { image: e.image, imageProps: { "aria-hidden": "true" } }),
-                                t().createElement(_r.ED, { text: e.text })
-                            ) :
-                            t().createElement(_r.sY, {
-                                key: e.value,
-                                name: r.key,
-                                value: e.value,
-                                checked: e.value === r.value,
-                                handleChange: v,
-                                threeLine: !0,
-                                skipChangeSelection: !0,
-                                disabled: S || e.disabled,
-                                "data-autom": `${r.key}${e.value}`,
-                                withAriaLabeledBy: !0
-                            },
-                                (e.productMessage || e.violator) && t().createElement(Rr.A, (0, Ce.A)({
-                                    className: qe()({ "rf-bfe-coming-soon-violator": e.productMessage }),
-                                    noScrim: !0,
-                                    reduced: !0
-                                }, (0, Ie.OH)(e.productMessage || e.violator))),
-                                t().createElement(_r._V, { text: e.text }),
-                                t().createElement(_r.ED, { "data-autom": `price${r.key}${e.value}`, text: Hr(e) })
-                            )
-                        )
-                    ),
+                    btn.appendChild(labelDiv);
             
-                    c && "dimensionColor" !== r.key && t().createElement("div", (0, Ce.A)({
-                        className: `rf-bfe-dimension-downpaymentfull ${ze.A.CAPTION}`
-                    }, (0, Ie.OH)(c))),
-                    r.footer && t().createElement(Ba.A, { disabled: S },
-                        t().createElement(_.Typography, { component: "div", variant: "body4", color: "textPrimary", dangerouslySetInnerHTML: { __html: r.footer } })
-                    )
-                );
-            },            
+                    // Event handler
+                    btn.addEventListener("click", () => {
+                        // Clear other buttons selection
+                        container.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", "false"));
+                        btn.setAttribute("aria-pressed", "true");
+                        // Set value in your model
+                        Br(i, variantKey); // assuming Br is your setter for selection
+                        // Update UI or do next step
+                    });
+            
+                    container.appendChild(btn);
+                });
+            
+                return container;
+            }
+            
             Gr = t().forwardRef(Yr),
             qr = (e, a) => {
                 let {
