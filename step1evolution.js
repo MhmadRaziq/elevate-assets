@@ -15136,7 +15136,7 @@
             //         disabled: S
             //     })) : null)
             // },
-            const Yr = (e, a) => {
+             Yr = (e, a) => {
                 let {
                     dimension: r,
                     gallery: s,
