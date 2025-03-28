@@ -24289,46 +24289,7 @@
                     footerContent: a,
                     selectionData: r = {}
                 } = e;
-              
                 const [s, i, o, l] = Gl();
-
-                // Set default screensize selection
-                t().useEffect(() => {
-                  if (!s.dimensionScreensize) {
-                    i({
-                      key: "dimensionScreensize",
-                      value: "6_3inch" // First variant from variantOrder
-                    });
-                    
-                    // Also set in comparison data
-                    $e.Ay.setEntryForStep("select", "dimensionScreensize", "6_3inch");
-                  }
-                }, [s.dimensionScreensize]); // Watch for dimensionScreensize changes
-                
-                // Price comparison handler
-                (0, Ye.A)("click", (e => {
-                  const t = e.target;
-                  if (t && t.matches('[data-ase-overlay="compare-price-overlay"]')) {
-                    e.preventDefault();
-                    let a = t.getAttribute("data-href");
-                    const s = $e.Ay.getEntryForStep("select", "pid"),
-                          o = {
-                            "dm.dimensionCapacity": $e.Ay.getEntryForStep("select", "dimensionCapacity") || n().get(r, "dimensionCapacity"),
-                            "dm.dimensionScreensize": $e.Ay.getEntryForStep("select", "dimensionScreensize") || "6_3inch", // Default fallback
-                            ti: !1
-                          };
-                    s && (o.pid = s, o.ti = !0);
-                    a = Nt.k0(a, n().omitBy(o, (e => null == e)));
-                    i(a);
-                    zl();
-                  }
-                }));
-
-
-
-
-
-
                 
                 (0, Ye.A)("click", (e => {
                     const t = e.target;
