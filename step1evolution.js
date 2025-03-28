@@ -10760,37 +10760,37 @@
                     };
                     let a, r;
                     const n = n => s => {
-                        if (r = window.sessionStorage.getItem("AS_LOG_LEVEL") || window.AS_LOG_LEVEL || t.ERROR, a = r in t ? t[r] : t.ERROR, t[n] <= a) try {
-                            let t;
-                            t = "string" == typeof s || "number" == typeof s || "boolean" == typeof s || "bigint" == typeof s ? {
-                                message: s
-                            } : Array.isArray(s) ? {
-                                message: s.toString()
-                            } : function(e) {
-                                const t = {
-                                    message: e.message,
-                                    colno: e.colno,
-                                    lineno: e.lineno,
-                                    stack: e.stack || e.error && e.error.stack,
-                                    name: e.name,
-                                    code: e.code
-                                };
-                                return { ...e,
-                                    ...t
-                                }
-                            }(s), (e => {
-                                const t = new CustomEvent("echoLogEvent", {
-                                    detail: e
-                                });
-                                window.dispatchEvent(t)
-                            })({ ...t,
-                                id: e,
-                                type: n.toLowerCase(),
-                                currentScriptSrc: document && document.currentScript && document.currentScript.src
-                            }), console[n.toLowerCase()](s)
-                        } catch (e) {
-                            console.error("as-utilities/logger: could not log message", e)
-                        }
+                        // if (r = window.sessionStorage.getItem("AS_LOG_LEVEL") || window.AS_LOG_LEVEL || t.ERROR, a = r in t ? t[r] : t.ERROR, t[n] <= a) try {
+                        //     let t;
+                        //     t = "string" == typeof s || "number" == typeof s || "boolean" == typeof s || "bigint" == typeof s ? {
+                        //         message: s
+                        //     } : Array.isArray(s) ? {
+                        //         message: s.toString()
+                        //     } : function(e) {
+                        //         const t = {
+                        //             message: e.message,
+                        //             colno: e.colno,
+                        //             lineno: e.lineno,
+                        //             stack: e.stack || e.error && e.error.stack,
+                        //             name: e.name,
+                        //             code: e.code
+                        //         };
+                        //         return { ...e,
+                        //             ...t
+                        //         }
+                        //     }(s), (e => {
+                        //         const t = new CustomEvent("echoLogEvent", {
+                        //             detail: e
+                        //         });
+                        //         window.dispatchEvent(t)
+                        //     })({ ...t,
+                        //         id: e,
+                        //         type: n.toLowerCase(),
+                        //         currentScriptSrc: document && document.currentScript && document.currentScript.src
+                        //     }), console[n.toLowerCase()](s)
+                        // } catch (e) {
+                        //     console.error("as-utilities/logger: could not log message", e)
+                        // }
                     };
                     return {
                         error: n("ERROR"),
