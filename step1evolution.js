@@ -15770,75 +15770,31 @@
                     ref: a
                 },
             
-                    isPackSize ? t().createElement(_r.c6, {
-                        legend: t().createElement(Ur, { dimension: r }),
-                        disabled: S,
-                        withGutters: !p,
-                        className: qe()("rf-bfe-product-dimension-group", "pack-size-group"),
-                        childAfterLegend: t().createElement(t().Fragment, null, 
-                            t().createElement(Br, { dimension: r }),
-                            m && s
-                        ),
-                        classes: { items: { "rf-bfe-step-disabled": S } }
-                    },
-                        t().createElement("div", { className: "rf-bfe-pack-size-wrapper" },
-                            t().createElement("select", {
-                                id: r.key,
-                                className: "rf-bfe-pack-size-select",
-                                name: r.key,
-                                value: r.value,
-                                onChange: (e) => v(e.target.value),
-                                disabled: S,
-                                "data-autom": "packSizeDropdown"
-                            },
-                                Object.entries(packSizeOptions).map(([key, label]) =>
-                                    t().createElement("option", {
-                                        key: key,
-                                        value: key,
-                                        disabled: S || w.find(e => e.value === key)?.disabled,
-                                        "data-autom": `packSizeOption-${key}`,
-                                        className: "rf-bfe-pack-size-option"
-                                    }, label)
-                                )
+                isPackSize ? t().createElement(_r.c6, {
+                    // ... [existing props] ...
+                },
+                    t().createElement("div", { className: "rf-bfe-pack-size-wrapper" },
+                        t().createElement("select", {
+                            id: r.key,
+                            className: "rf-bfe-pack-size-select",
+                            name: r.key,
+                            value: r.value,
+                            onChange: (e) => v(e.target.value),
+                            disabled: false, // Force enabled
+                            "data-autom": "packSizeDropdown"
+                        },
+                            Object.entries(packSizeOptions).map(([key, label]) =>
+                                t().createElement("option", {
+                                    key: key,
+                                    value: key,
+                                    disabled: false, // Force enabled
+                                    "data-autom": `packSizeOption-${key}`,
+                                    className: "rf-bfe-pack-size-option"
+                                }, label)
                             )
                         )
-                    ) :
-            
-                    g ? t().createElement(_r.ee, {
-                        key: r.key,
-                        legend: t().createElement(Ur, { dimension: r }),
-                        className: "rf-bfe-product-dimension-group",
-                        disabled: S,
-                        childAfterLegend: t().createElement(t().Fragment, null,
-                            t().createElement(Br, { dimension: r }),
-                            m && s,
-                            t().createElement($r, { dimension: r, colorHover: f })
-                        ),
-                        classes: { items: { "rf-colornav-items-with-violator": A, "rf-bfe-step-disabled": S } }
-                    },
-                        w.map(e => t().createElement(_r.aU, {
-                            name: r.key,
-                            value: e.value,
-                            key: e.value,
-                            text: e.text,
-                            isProductRed: "product_red" === e.value,
-                            classes: {
-                                label: "rf-bfe-product-dimension-colornav-label",
-                                input: "rf-bfe-product-dimension-colornav-input"
-                            },
-                            badgeText: e.productMessage || e.violator,
-                            image: e.image,
-                            handleChange: v,
-                            skipChangeSelection: !0,
-                            checked: e.value === r.value,
-                            disabled: S || e.disabled,
-                            "data-autom": `${r.key}${e.value}`,
-                            labelAttrs: {
-                                onMouseEnter: Vr.touch ? void 0 : () => y(e.text),
-                                onMouseLeave: Vr.touch ? void 0 : () => y()
-                            }
-                        }))
-                    ) :
+                    )
+                ) :
             
                     t().createElement(_r.c6, {
                         legend: t().createElement(Ur, { dimension: r }),
