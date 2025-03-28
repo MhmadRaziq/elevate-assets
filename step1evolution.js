@@ -15720,7 +15720,7 @@
             //         )
             //     );
             // },
-             Yr = (e, a) => {
+            Yr = (e, a) => {
                 let {
                     dimension: r,
                     gallery: s,
@@ -15742,8 +15742,10 @@
                     v = e => i(r.key, e),
                     b = Boolean(r.value),
                     A = Boolean(r.options.find(e => e.productMessage || e.violator)),
-                    S = false, // Force enabled state
-                    w = r.options; // Show all options
+                    // Force enable pack size dimension
+                    S = isPackSize ? false : r.disabled || d,
+                    // Show all options for pack size
+                    w = isPackSize ? r.options : (r.showDisabledSelectors || window?.NAMED_ASSETS?.showDisabledSelectors ? r.options : r.options.filter(e => !e.disabled));
             
                 t().useLayoutEffect(o, [o]);
             
@@ -15763,7 +15765,7 @@
                 return t().createElement("div", {
                     className: qe()(l, "rf-bfe-dimension", `rf-bfe-dimension-${r.key.toLowerCase()}`),
                     "data-analytics-section": r.key,
-                    "data-step-enabled": true,
+                    "data-step-enabled": !S || void 0,
                     "data-step-complete": b,
                     "data-observer-key": r.key,
                     ref: a
@@ -15771,7 +15773,7 @@
             
                     isPackSize ? t().createElement(_r.c6, {
                         legend: t().createElement(Ur, { dimension: r }),
-                        disabled: false,
+                        disabled: false, // Force enable container
                         withGutters: !p,
                         className: qe()("rf-bfe-product-dimension-group", "pack-size-group"),
                         childAfterLegend: t().createElement(t().Fragment, null, 
@@ -15787,14 +15789,14 @@
                                 name: r.key,
                                 value: r.value,
                                 onChange: (e) => v(e.target.value),
-                                disabled: false,
+                                disabled: false, // Force enable dropdown
                                 "data-autom": "packSizeDropdown"
                             },
                                 Object.entries(packSizeOptions).map(([key, label]) =>
                                     t().createElement("option", {
                                         key: key,
                                         value: key,
-                                        disabled: false,
+                                        disabled: false, // Force enable all options
                                         "data-autom": `packSizeOption-${key}`,
                                         className: "rf-bfe-pack-size-option"
                                     }, label)
@@ -15807,13 +15809,13 @@
                         key: r.key,
                         legend: t().createElement(Ur, { dimension: r }),
                         className: "rf-bfe-product-dimension-group",
-                        disabled: false,
+                        disabled: S,
                         childAfterLegend: t().createElement(t().Fragment, null,
                             t().createElement(Br, { dimension: r }),
                             m && s,
                             t().createElement($r, { dimension: r, colorHover: f })
                         ),
-                        classes: { items: { "rf-colornav-items-with-violator": A, "rf-bfe-step-disabled": false } }
+                        classes: { items: { "rf-colornav-items-with-violator": A, "rf-bfe-step-disabled": S } }
                     },
                         w.map(e => t().createElement(_r.aU, {
                             name: r.key,
@@ -15830,7 +15832,7 @@
                             handleChange: v,
                             skipChangeSelection: !0,
                             checked: e.value === r.value,
-                            disabled: false,
+                            disabled: S || e.disabled,
                             "data-autom": `${r.key}${e.value}`,
                             labelAttrs: {
                                 onMouseEnter: Vr.touch ? void 0 : () => y(e.text),
@@ -15841,14 +15843,14 @@
             
                     t().createElement(_r.c6, {
                         legend: t().createElement(Ur, { dimension: r }),
-                        disabled: false,
+                        disabled: S,
                         withGutters: !p,
                         className: qe()("rf-bfe-product-dimension-group"),
                         childAfterLegend: t().createElement(t().Fragment, null, 
                             t().createElement(Br, { dimension: r }), 
                             m && s
                         ),
-                        classes: { items: { "rf-bfe-step-disabled": false } }
+                        classes: { items: { "rf-bfe-step-disabled": S } }
                     },
                         w.map(e => p ? t().createElement(_r.gW, {
                             key: e.value,
@@ -15857,7 +15859,7 @@
                             checked: e.value === r.value,
                             handleChange: v,
                             skipChangeSelection: !0,
-                            disabled: false,
+                            disabled: S || e.disabled,
                             "data-autom": `${r.key}${e.value}`,
                             withAriaLabeledBy: !0,
                             render: a => {
@@ -15894,7 +15896,7 @@
                             handleChange: v,
                             showSwatch: !0,
                             skipChangeSelection: !0,
-                            disabled: false,
+                            disabled: S || e.disabled,
                             "data-autom": `${r.key}${e.value}`
                         },
                             e.productMessage && t().createElement(Rr.A, (0, Ce.A)({
@@ -15913,7 +15915,7 @@
                             handleChange: v,
                             threeLine: !0,
                             skipChangeSelection: !0,
-                            disabled: false,
+                            disabled: S || e.disabled,
                             "data-autom": `${r.key}${e.value}`,
                             withAriaLabeledBy: !0
                         },
@@ -15934,7 +15936,7 @@
                     c && "dimensionColor" !== r.key && t().createElement("div", (0, Ce.A)({
                         className: `rf-bfe-dimension-downpaymentfull ${ze.A.CAPTION}`
                     }, (0, Ie.OH)(c))),
-                    r.footer && t().createElement(Ba.A, { disabled: false },
+                    r.footer && t().createElement(Ba.A, { disabled: S },
                         t().createElement(_.Typography, { 
                             component: "div", 
                             variant: "body4", 
