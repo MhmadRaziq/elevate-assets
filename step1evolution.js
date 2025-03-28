@@ -11202,7 +11202,6 @@
         9486: "accessory-component5",
         9645: "accessory-adapter13",
         9733: "accessory-slot-adapter3",
-        9762: "product-locator-overlay",
         9867: "accessory-component8"
     }[e] || e) + ".chunk.js"), l.miniCssF = e => (({
         132: "lazy-applecare-options",
@@ -11235,7 +11234,6 @@
         9036: "engraving",
         9379: "tradeup-overlay",
         9486: "accessory-component5",
-        9762: "product-locator-overlay",
         9867: "accessory-component8"
     }[e] || e) + ".css"), l.g = function() {
         if ("object" == typeof globalThis) return globalThis;
@@ -11357,7 +11355,6 @@
                     9036: 1,
                     9379: 1,
                     9486: 1,
-                    9762: 1,
                     9867: 1
                 }[a] && r.push(t[a] = e(a).then((() => {
                     t[a] = 0
@@ -11426,7 +11423,7 @@
         var t = s[e];
         Array.isArray(t) && t.map(l.E)
     })), l.O(0, [933], (() => {
-        [  9762].map(l.E)
+        [  ].map(l.E)
     }), 5);
     var c = {};
     (() => {
@@ -16850,7 +16847,7 @@
             },
             Jn = t().lazy((() => Promise.all([]).then(l.bind(l, 8971)))),
             Qn = t().lazy((() => Promise.all([l.e(2834)]).then(l.bind(l, 3075)))),
-            Zn = t().lazy(() => Promise.all([l.e(9762)]).then(l.bind(l, 5944)));
+            Zn = t().lazy(() => Promise.all([]).then(l.bind(l, 5944))),
             es = e => {
                 let {
                     isDisabled: a,
@@ -21446,81 +21443,53 @@
                 CACHE_KEY: Jo,
                 DEFAULT_KEY: Qo
             } = lr,
-            // Zo = t => {
-            //     let {
-            //         selectionArea: a
-            //     } = t;
-            //     const {
-            //         viewport: r
-            //     } = (0, Be.S)(), s = (0, e.useRef)(!0), i = n().get(a, "activeStep", {}), o = n().get(a, "focusedStep"), l = n().get(a, "forceGalleryUpdate"), c = n().get(a, `moduleState.${o}.selectedGroupKey`), d = c ? n().get(a, `moduleState.${o}.selectedGroupVal`) : null, u = "small" === r ? n().get(a, "accessorySelection", {}) : null, [m, p] = (0, e.useState)([]), g = i ? JSON.stringify(i) : "", f = n().get(a, "selection", {}), y = n().get(a, "productSelection.state.selectionImage", {}), E = n().get(a, "kitProduct.vq.partNumber") || n().get(a, "kitProduct.vq.vq"), h = E || d, v = E ? "vq" : null, b = n().get(window.NAMED_ASSETS, "disableAutoScroll", !1) ? JSON.stringify(f) : "";
-            //     (0, e.useEffect)((() => {
-            //         const e = n().get(window, `${lr.CACHE_KEY}.productGalleryUrl`);
-            //         if (e) {
-            //             const t = n().get(a, "productSelection.state.dimensions", []);
-            //             let r = o || n().get(t, "[0].key");
-            //             if (c) {
-            //                 n().get(window, `${Jo}.productGalleryData.${c}.${Qo}`) && (r = c)
-            //             }
-            //             const d = jo(r, f, h),
-            //                 m = {
-            //                     selection: f,
-            //                     step: r,
-            //                     stepValue: n().get(i, r),
-            //                     selectionImage: y,
-            //                     key: d,
-            //                     addonStep: v,
-            //                     addonPart: h
-            //                 };
-            //             s.current && u && (m.accSelection = u), Xo(e, m, l).then((e => {
-            //                 p(e), s.current = !1
-            //             }))
-            //         }
-            //     }), [g, o, c, l, b, h]);
-            //     return {
-            //         galleryItems: m,
-            //         hasGalleryItems: n().get(m, "length") > 0,
-            //         getGalleryItemsForStep: (e, t, a, r) => {
-            //             let s = e;
-            //             if (t) {
-            //                 n().get(window, `${Jo}.productGalleryData.${t}.${Qo}`) && (s = t)
-            //             }
-            //             const i = a ? lr.DEFAULT_KEY : jo(s, f, r),
-            //                 {
-            //                     items: o
-            //                 } = zo(t || s, i);
-            //             return o
-            //         }
-            //     }
-            // };
-      
             Zo = t => {
-                // Remove most of the selection-related logic
-                const [m, p] = (0, e.useState)([]);
-                
-                (0, e.useEffect)(() => {
+                let {
+                    selectionArea: a
+                } = t;
+                const {
+                    viewport: r
+                } = (0, Be.S)(), s = (0, e.useRef)(!0), i = n().get(a, "activeStep", {}), o = n().get(a, "focusedStep"), l = n().get(a, "forceGalleryUpdate"), c = n().get(a, `moduleState.${o}.selectedGroupKey`), d = c ? n().get(a, `moduleState.${o}.selectedGroupVal`) : null, u = "small" === r ? n().get(a, "accessorySelection", {}) : null, [m, p] = (0, e.useState)([]), g = i ? JSON.stringify(i) : "", f = n().get(a, "selection", {}), y = n().get(a, "productSelection.state.selectionImage", {}), E = n().get(a, "kitProduct.vq.partNumber") || n().get(a, "kitProduct.vq.vq"), h = E || d, v = E ? "vq" : null, b = n().get(window.NAMED_ASSETS, "disableAutoScroll", !1) ? JSON.stringify(f) : "";
+                (0, e.useEffect)((() => {
                     const e = n().get(window, `${lr.CACHE_KEY}.productGalleryUrl`);
                     if (e) {
-                        // Simplified request object - remove all selection parameters
-                        const m = {
-                            key: 'static' // Just use a static key
-                        };
-                        
-                        Xo(e, m).then((data) => {
-                            p(data);
-                        });
+                        const t = n().get(a, "productSelection.state.dimensions", []);
+                        let r = o || n().get(t, "[0].key");
+                        if (c) {
+                            n().get(window, `${Jo}.productGalleryData.${c}.${Qo}`) && (r = c)
+                        }
+                        const d = jo(r, f, h),
+                            m = {
+                                selection: f,
+                                step: r,
+                                stepValue: n().get(i, r),
+                                selectionImage: y,
+                                key: d,
+                                addonStep: v,
+                                addonPart: h
+                            };
+                        s.current && u && (m.accSelection = u), Xo(e, m, l).then((e => {
+                            p(e), s.current = !1
+                        }))
                     }
-                }, []); // Empty dependency array means this runs once on mount
-            
+                }), [g, o, c, l, b, h]);
                 return {
                     galleryItems: m,
                     hasGalleryItems: n().get(m, "length") > 0,
-                    getGalleryItemsForStep: () => {
-                        // Return all items regardless of step/selection
-                        return m;
+                    getGalleryItemsForStep: (e, t, a, r) => {
+                        let s = e;
+                        if (t) {
+                            n().get(window, `${Jo}.productGalleryData.${t}.${Qo}`) && (s = t)
+                        }
+                        const i = a ? lr.DEFAULT_KEY : jo(s, f, r),
+                            {
+                                items: o
+                            } = zo(t || s, i);
+                        return o
                     }
-                };
+                }
             };
-            var el = l(1855);
+        var el = l(1855);
         const tl = t().forwardRef(((e, a) => {
                 let {
                     className: r,
