@@ -21425,14 +21425,14 @@
                         s(d)
                     } else if (a || (u || !l) && c !== lr.DEFAULT_KEY) {
                         const r = Nt.k0(e, p);
-                        (0, M.hI)(r).then((e => {
-                            const r = n().get(e, "body", {}),
-                                i = Ko(n().cloneDeep(r), o, t, a);
-                            n().isEmpty(i.items) && m ? s([{
-                                image: { ...t.selectionImage
-                                }
-                            }]) : s(i.items)
-                        }))
+                        // (0, M.hI)(r).then((e => {
+                        //     const r = n().get(e, "body", {}),
+                        //         i = Ko(n().cloneDeep(r), o, t, a);
+                        //     n().isEmpty(i.items) && m ? s([{
+                        //         image: { ...t.selectionImage
+                        //         }
+                        //     }]) : s(i.items)
+                        // }))
                     } else m && s([{
                         image: { ...t.selectionImage
                         }
