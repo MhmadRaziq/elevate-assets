@@ -10705,25 +10705,25 @@
                         //             s.abort(), n(new i(c, r))
                         //         }), a.timeout)
                         //     }));
-                        try {
-                            const e = window.performance && window.performance.now(),
-                                t = await Promise.race([d, u]);
-                            if (t.ok) {
-                                const a = window.performance && window.performance.now();
-                                return window.performance && o({
-                                    request: c,
-                                    response: t,
-                                    start: e,
-                                    end: a,
-                                    traceId: r
-                                }), t
-                            }
-                            throw new n(t, c, r)
-                        } catch (e) {
-                            throw e
-                        } finally {
-                            clearTimeout(t)
-                        }
+                        // try {
+                        //     const e = window.performance && window.performance.now(),
+                        //         t = await Promise.race([d, u]);
+                        //     if (t.ok) {
+                        //         const a = window.performance && window.performance.now();
+                        //         return window.performance && o({
+                        //             request: c,
+                        //             response: t,
+                        //             start: e,
+                        //             end: a,
+                        //             traceId: r
+                        //         }), t
+                        //     }
+                        //     throw new n(t, c, r)
+                        // } catch (e) {
+                        //     throw e
+                        // } finally {
+                        //     clearTimeout(t)
+                        // }
                     },
                     d = async function(e) {
                         let t, a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
