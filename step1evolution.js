@@ -15137,9 +15137,31 @@
             //     })) : null)
             // },
              Yr = (e, a) => {
-                const { classes: l, dimension: r, isPackSize: isPackSize, showDownpaymentFullText: c, disableLegend: p, productDimensionHover: f, showStep: S, footerInDimension: m } = e;
-                const { options: w } = r;
-                const [b, v, y] = Tr(r, e);
+                let {
+                    dimension: r,
+                    gallery: s,
+                    onChange: i,
+                    onLayout: o = n().noop,
+                    className: l,
+                    downPaymentFull: c,
+                    disabled: d
+                } = e;
+            
+                const { viewport: u } = (0, Be.S)(),
+                    m = "small" === u,
+                    p = r.view === or.FULL_WIDTH || "dimensionScreensize" === r.key,
+                    g = r.view === or.COLOR_NAV,
+                    isPackSize = r.key === "dimensionPackSize",
+                    [f, y] = t().useState(),
+                    E = n().get(window.decisionSection, r.key),
+                    h = n().get(r, "chooseShortPrice"),
+                    v = e => i(r.key, e),
+                    b = Boolean(r.value),
+                    A = Boolean(r.options.find(e => e.productMessage || e.violator)),
+                    S = r.disabled || d,
+                    w = r.showDisabledSelectors || window?.NAMED_ASSETS?.showDisabledSelectors ? r.options : r.options.filter(e => !e.disabled);
+            
+                t().useLayoutEffect(o, [o]);
             
                 return t().createElement("div", {
                     className: qe()(l, "rf-bfe-dimension", `rf-bfe-dimension-${r.key.toLowerCase()}`),
@@ -15150,128 +15172,164 @@
                     ref: a
                 },
             
-                    // ----------- Color first -----------
-                    "dimensionColor" === r.key ? t().createElement(_r.ee, {
+                    // -------- PACK SIZE --------
+                    isPackSize ? t().createElement(_r.c6, {
+                        legend: t().createElement(Ur, { dimension: r }),
+                        disabled: S,
+                        withGutters: !p,
+                        className: qe()("rf-bfe-product-dimension-group"),
+                        childAfterLegend: t().createElement(t().Fragment, null, t().createElement(Br, { dimension: r }), m && s),
+                        classes: { items: { "rf-bfe-step-disabled": S } }
+                    },
+                        w.map(e => t().createElement(_r.sY, {
+                            key: e.value,
+                            name: r.key,
+                            value: e.value,
+                            checked: e.value === r.value,
+                            handleChange: v,
+                            threeLine: !0,
+                            skipChangeSelection: !0,
+                            disabled: S || e.disabled,
+                            "data-autom": `${r.key}${e.value}`,
+                            withAriaLabeledBy: !0
+                        },
+                            (e.productMessage || e.violator) && t().createElement(Rr.A, (0, Ce.A)({
+                                className: qe()({
+                                    "rf-bfe-coming-soon-violator": e.productMessage
+                                }),
+                                noScrim: !0,
+                                reduced: !0
+                            }, (0, Ie.OH)(e.productMessage || e.violator))),
+                            t().createElement(_r._V, { text: e.text }),
+                            t().createElement(_r.ED, { "data-autom": `price${r.key}${e.value}`, text: Hr(e) })
+                        ))
+                    ) :
+            
+                    // -------- COLOR NAV --------
+                    g ? t().createElement(_r.ee, {
                         key: r.key,
                         legend: t().createElement(Ur, { dimension: r }),
                         className: "rf-bfe-product-dimension-group",
                         disabled: S,
                         childAfterLegend: t().createElement(t().Fragment, null,
                             t().createElement(Br, { dimension: r }),
-                            m && e.s,
+                            m && s,
                             t().createElement($r, { dimension: r, colorHover: f })
                         ),
-                        classes: { items: { "rf-colornav-items-with-violator": e.showViolator, "rf-bfe-step-disabled": S } }
+                        classes: { items: { "rf-colornav-items-with-violator": A, "rf-bfe-step-disabled": S } }
                     },
-                        w.map(n => t().createElement(_r.aU, {
+                        w.map(e => t().createElement(_r.aU, {
                             name: r.key,
-                            value: n.value,
-                            key: n.value,
-                            text: n.text,
-                            isProductRed: "product_red" === n.value,
+                            value: e.value,
+                            key: e.value,
+                            text: e.text,
+                            isProductRed: "product_red" === e.value,
                             classes: {
                                 label: "rf-bfe-product-dimension-colornav-label",
                                 input: "rf-bfe-product-dimension-colornav-input"
                             },
-                            badgeText: n.productMessage || n.violator,
-                            image: n.image,
+                            badgeText: e.productMessage || e.violator,
+                            image: e.image,
                             handleChange: v,
                             skipChangeSelection: !0,
-                            checked: n.value === r.value,
-                            disabled: S || n.disabled,
-                            "data-autom": `${r.key}${n.value}`,
+                            checked: e.value === r.value,
+                            disabled: S || e.disabled,
+                            "data-autom": `${r.key}${e.value}`,
                             labelAttrs: {
-                                onMouseEnter: Vr.touch ? void 0 : () => y(n.text),
+                                onMouseEnter: Vr.touch ? void 0 : () => y(e.text),
                                 onMouseLeave: Vr.touch ? void 0 : () => y()
                             }
                         }))
                     ) :
             
-                    // ----------- PackSize second -----------
-                    "dimensionPackSize" === r.key ? t().createElement(_r.c6, {
-                        legend: t().createElement(Ur, { dimension: r }),
-                        disabled: S,
-                        withGutters: !p,
-                        className: qe()("rf-bfe-product-dimension-group"),
-                        childAfterLegend: t().createElement(t().Fragment, null,
-                            t().createElement(Br, { dimension: r }),
-                            m && e.s
-                        ),
-                        classes: { items: { "rf-bfe-step-disabled": S } }
-                    },
-                        w.map(n => t().createElement(_r.sY, {
-                            key: n.value,
-                            name: r.key,
-                            value: n.value,
-                            checked: n.value === r.value,
-                            handleChange: v,
-                            threeLine: !0,
-                            skipChangeSelection: !0,
-                            disabled: S || n.disabled,
-                            "data-autom": `${r.key}${n.value}`,
-                            withAriaLabeledBy: !0
-                        },
-                            (n.productMessage || n.violator) && t().createElement(Rr.A, (0, Ce.A)({
-                                className: qe()({
-                                    "rf-bfe-coming-soon-violator": n.productMessage
-                                }),
-                                noScrim: !0,
-                                reduced: !0
-                            }, (0, Ie.OH)(n.productMessage || n.violator))),
-                            t().createElement(_r._V, { text: n.text }),
-                            t().createElement(_r.ED, { "data-autom": `price${r.key}${n.value}`, text: Hr(n) })
-                        ))
-                    ) :
-            
-                    // ----------- Default Dimensions -----------
+                    // -------- NORMAL DIMENSION --------
                     t().createElement(_r.c6, {
                         legend: t().createElement(Ur, { dimension: r }),
                         disabled: S,
                         withGutters: !p,
                         className: qe()("rf-bfe-product-dimension-group"),
-                        childAfterLegend: t().createElement(t().Fragment, null,
-                            t().createElement(Br, { dimension: r }),
-                            m && e.s
-                        ),
+                        childAfterLegend: t().createElement(t().Fragment, null, t().createElement(Br, { dimension: r }), m && s),
                         classes: { items: { "rf-bfe-step-disabled": S } }
                     },
-                        w.map(n => t().createElement(_r.sY, {
-                            key: n.value,
+                        w.map(e => p ? t().createElement(_r.gW, {
+                            key: e.value,
                             name: r.key,
-                            value: n.value,
-                            checked: n.value === r.value,
+                            value: e.value,
+                            checked: e.value === r.value,
                             handleChange: v,
                             skipChangeSelection: !0,
-                            disabled: S || n.disabled,
-                            "data-autom": `${r.key}${n.value}`,
-                            withAriaLabeledBy: !0
-                        },
-                            (n.productMessage || n.violator) && t().createElement(Rr.A, (0, Ce.A)({
-                                className: qe()({
-                                    "rf-bfe-coming-soon-violator": n.productMessage
-                                }),
-                                noScrim: !0,
-                                reduced: !0
-                            }, (0, Ie.OH)(n.productMessage || n.violator))),
-                            t().createElement(_r._V, { text: n.text }),
-                            t().createElement(_r.ED, { "data-autom": `price${r.key}${n.value}`, text: Hr(n) })
-                        ))
+                            disabled: S || e.disabled,
+                            "data-autom": `${r.key}${e.value}`,
+                            withAriaLabeledBy: !0,
+                            render: a => {
+                                let { SelectorLabel: n } = a;
+                                return t().createElement(n, null,
+                                    t().createElement("span", { className: "row" },
+                                        t().createElement("span", { className: qe()("column", "form-selector-left-col", "rf-bfe-selector-left-col") },
+                                            (e.productMessage || e.violator) && t().createElement(Rr.A, (0, Ce.A)({
+                                                className: qe()({ "rf-bfe-coming-soon-violator": e.productMessage }),
+                                                noScrim: !0, reduced: !0
+                                            }, (0, Ie.OH)(e.productMessage || e.violator))),
+                                            t().createElement(_r._V, { text: e.text })
+                                        ),
+                                        t().createElement("span", { className: qe()("column", "form-selector-right-col", "rf-bfe-selector-right-col") },
+                                            t().createElement(_r.ED, { "data-autom": `price${r.key}${e.value}`, text: Hr(e, !1, !1, { chooseShortPrice: h }) })
+                                        )
+                                    ),
+                                    e.subText && t().createElement(_r.ED, { className: "rf-bfe-selector-subtext", text: e.subText })
+                                )
+                            }
+                        }) :
+                            r.view === or.WITH_SWATCH ? t().createElement(_r.sY, {
+                                key: e.value,
+                                name: r.key,
+                                value: e.value,
+                                checked: e.value === r.value,
+                                handleChange: v,
+                                showSwatch: !0,
+                                skipChangeSelection: !0,
+                                disabled: S || e.disabled,
+                                "data-autom": `${r.key}${e.value}`
+                            },
+                                e.productMessage && t().createElement(Rr.A, (0, Ce.A)({
+                                    className: "rf-bfe-coming-soon-violator",
+                                    noScrim: !0,
+                                    reduced: !0
+                                }, (0, Ie.OH)(e.productMessage))),
+                                t().createElement(_r.rp, { image: e.image, imageProps: { "aria-hidden": "true" } }),
+                                t().createElement(_r.ED, { text: e.text })
+                            ) :
+                            t().createElement(_r.sY, {
+                                key: e.value,
+                                name: r.key,
+                                value: e.value,
+                                checked: e.value === r.value,
+                                handleChange: v,
+                                threeLine: !0,
+                                skipChangeSelection: !0,
+                                disabled: S || e.disabled,
+                                "data-autom": `${r.key}${e.value}`,
+                                withAriaLabeledBy: !0
+                            },
+                                (e.productMessage || e.violator) && t().createElement(Rr.A, (0, Ce.A)({
+                                    className: qe()({ "rf-bfe-coming-soon-violator": e.productMessage }),
+                                    noScrim: !0,
+                                    reduced: !0
+                                }, (0, Ie.OH)(e.productMessage || e.violator))),
+                                t().createElement(_r._V, { text: e.text }),
+                                t().createElement(_r.ED, { "data-autom": `price${r.key}${e.value}`, text: Hr(e) })
+                            )
+                        )
                     ),
             
-                    // ----------- Optional Down Payment Text & Footer -----------
                     c && "dimensionColor" !== r.key && t().createElement("div", (0, Ce.A)({
                         className: `rf-bfe-dimension-downpaymentfull ${ze.A.CAPTION}`
                     }, (0, Ie.OH)(c))),
                     r.footer && t().createElement(Ba.A, { disabled: S },
-                        t().createElement(_.Typography, {
-                            component: "div",
-                            variant: "body4",
-                            color: "textPrimary",
-                            dangerouslySetInnerHTML: { __html: r.footer }
-                        })
+                        t().createElement(_.Typography, { component: "div", variant: "body4", color: "textPrimary", dangerouslySetInnerHTML: { __html: r.footer } })
                     )
                 );
-            },                       
+            },            
             Gr = t().forwardRef(Yr),
             qr = (e, a) => {
                 let {
