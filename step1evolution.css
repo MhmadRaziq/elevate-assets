@@ -14833,8 +14833,8 @@ html.form-keyboarduser .form-selector .form-selector-input:focus~.form-selector-
 .form-selector-group-withgutters {
     list-style: none;
     margin-top: 8px;
-    margin-inline-end: -.4117647059rem;
-    margin-inline-start: -.4117647059rem;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
     width: auto
 }
 
