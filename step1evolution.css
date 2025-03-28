@@ -20410,7 +20410,8 @@ html.as-keyboarduser .waitindicator:focus {
 @media(max-width:1023px)and (max-device-width:736px) {
     .rf-bfe-summary-section-fullWidth .rf-bfe-summary-grid {
         float: none;
-        width: auto
+        width: auto;
+        padding-bottom: 20px;
     }
 }
 
