@@ -15321,6 +15321,201 @@
             //     );
             // },
 
+            //  Yr = (e, a) => {
+            //     let {
+            //         dimension: r,
+            //         gallery: s,
+            //         onChange: i,
+            //         onLayout: o = n().noop,
+            //         className: l,
+            //         downPaymentFull: c,
+            //         disabled: d
+            //     } = e;
+            
+            //     const { viewport: u } = (0, Be.S)(),
+            //         m = "small" === u,
+            //         p = r.view === or.FULL_WIDTH || "dimensionScreensize" === r.key,
+            //         g = r.view === or.COLOR_NAV,
+            //         isPackSize = r.key === "dimensionPackSize",
+            //         [f, y] = t().useState(),
+            //         E = n().get(window.decisionSection, r.key),
+            //         h = n().get(r, "chooseShortPrice"),
+            //         v = e => i(r.key, e),
+            //         b = Boolean(r.value),
+            //         A = Boolean(r.options.find(e => e.productMessage || e.violator)),
+            //         S = r.disabled || d,
+            //         w = r.showDisabledSelectors || window?.NAMED_ASSETS?.showDisabledSelectors ? r.options : r.options.filter(e => !e.disabled);
+            
+            //     t().useLayoutEffect(o, [o]);
+            
+            //     // Pack size options
+            //     const packSizeOptions = {
+            //         "1": "1 Set (12 tables)",
+            //         "2": "2 Sets (24 tables)",
+            //         "3": "3 Sets (36 tables)",
+            //         "4": "4 Sets (48 tables)",
+            //         "5": "5 Sets (60 tables)",
+            //         "6": "6 Sets (72 tables)",
+            //         "7": "7 Sets (84 tables)",
+            //         "8": "8 Sets (96 tables)",
+            //         "9": "9 Sets (108 tables)",
+            //         "10": "10 Sets (120 tables)"
+            //     };
+            
+            //     return t().createElement("div", {
+            //         className: qe()(l, "rf-bfe-dimension", `rf-bfe-dimension-${r.key.toLowerCase()}`),
+            //         "data-analytics-section": r.key,
+            //         "data-step-enabled": !S || void 0,
+            //         "data-step-complete": b,
+            //         "data-observer-key": r.key,
+            //         ref: a
+            //     },
+            
+            //         // -------- PACK SIZE DROPDOWN --------
+            //         isPackSize ? t().createElement("div", { className: "pack-size-dropdown" },
+            //             t().createElement("label", { htmlFor: r.key }, "Select Pack Size"),
+            //             t().createElement("select", {
+            //                 id: r.key,
+            //                 name: r.key,
+            //                 value: r.value,
+            //                 onChange: (e) => v(e.target.value),
+            //                 disabled: S
+            //             },
+            //                 Object.keys(packSizeOptions).map(key =>
+            //                     t().createElement("option", {
+            //                         key: key,
+            //                         value: key,
+            //                         disabled: S || w.find(e => e.value === key)?.disabled
+            //                     }, packSizeOptions[key])
+            //                 )
+            //             )
+            //         ) :
+            
+            //         // -------- OTHER DIMENSIONS --------
+            //         g ? t().createElement(_r.ee, {
+            //             key: r.key,
+            //             legend: t().createElement(Ur, { dimension: r }),
+            //             className: "rf-bfe-product-dimension-group",
+            //             disabled: S,
+            //             childAfterLegend: t().createElement(t().Fragment, null,
+            //                 t().createElement(Br, { dimension: r }),
+            //                 m && s,
+            //                 t().createElement($r, { dimension: r, colorHover: f })
+            //             ),
+            //             classes: { items: { "rf-colornav-items-with-violator": A, "rf-bfe-step-disabled": S } }
+            //         },
+            //             w.map(e => t().createElement(_r.aU, {
+            //                 name: r.key,
+            //                 value: e.value,
+            //                 key: e.value,
+            //                 text: e.text,
+            //                 isProductRed: "product_red" === e.value,
+            //                 classes: {
+            //                     label: "rf-bfe-product-dimension-colornav-label",
+            //                     input: "rf-bfe-product-dimension-colornav-input"
+            //                 },
+            //                 badgeText: e.productMessage || e.violator,
+            //                 image: e.image,
+            //                 handleChange: v,
+            //                 skipChangeSelection: !0,
+            //                 checked: e.value === r.value,
+            //                 disabled: S || e.disabled,
+            //                 "data-autom": `${r.key}${e.value}`,
+            //                 labelAttrs: {
+            //                     onMouseEnter: Vr.touch ? void 0 : () => y(e.text),
+            //                     onMouseLeave: Vr.touch ? void 0 : () => y()
+            //                 }
+            //             }))
+            //         ) :
+            
+            //         // -------- NORMAL DIMENSION --------
+            //         t().createElement(_r.c6, {
+            //             legend: t().createElement(Ur, { dimension: r }),
+            //             disabled: S,
+            //             withGutters: !p,
+            //             className: qe()("rf-bfe-product-dimension-group"),
+            //             childAfterLegend: t().createElement(t().Fragment, null, t().createElement(Br, { dimension: r }), m && s),
+            //             classes: { items: { "rf-bfe-step-disabled": S } }
+            //         },
+            //             w.map(e => p ? t().createElement(_r.gW, {
+            //                 key: e.value,
+            //                 name: r.key,
+            //                 value: e.value,
+            //                 checked: e.value === r.value,
+            //                 handleChange: v,
+            //                 skipChangeSelection: !0,
+            //                 disabled: S || e.disabled,
+            //                 "data-autom": `${r.key}${e.value}`,
+            //                 withAriaLabeledBy: !0,
+            //                 render: a => {
+            //                     let { SelectorLabel: n } = a;
+            //                     return t().createElement(n, null,
+            //                         t().createElement("span", { className: "row" },
+            //                             t().createElement("span", { className: qe()("column", "form-selector-left-col", "rf-bfe-selector-left-col") },
+            //                                 (e.productMessage || e.violator) && t().createElement(Rr.A, (0, Ce.A)({
+            //                                     className: qe()({ "rf-bfe-coming-soon-violator": e.productMessage }),
+            //                                     noScrim: !0, reduced: !0
+            //                                 }, (0, Ie.OH)(e.productMessage || e.violator))),
+            //                                 t().createElement(_r._V, { text: e.text })
+            //                             ),
+            //                             t().createElement("span", { className: qe()("column", "form-selector-right-col", "rf-bfe-selector-right-col") },
+            //                                 t().createElement(_r.ED, { "data-autom": `price${r.key}${e.value}`, text: Hr(e, !1, !1, { chooseShortPrice: h }) })
+            //                             )
+            //                         ),
+            //                         e.subText && t().createElement(_r.ED, { className: "rf-bfe-selector-subtext", text: e.subText })
+            //                     )
+            //                 }
+            //             }) :
+            //                 r.view === or.WITH_SWATCH ? t().createElement(_r.sY, {
+            //                     key: e.value,
+            //                     name: r.key,
+            //                     value: e.value,
+            //                     checked: e.value === r.value,
+            //                     handleChange: v,
+            //                     showSwatch: !0,
+            //                     skipChangeSelection: !0,
+            //                     disabled: S || e.disabled,
+            //                     "data-autom": `${r.key}${e.value}`
+            //                 },
+            //                     e.productMessage && t().createElement(Rr.A, (0, Ce.A)({
+            //                         className: "rf-bfe-coming-soon-violator",
+            //                         noScrim: !0,
+            //                         reduced: !0
+            //                     }, (0, Ie.OH)(e.productMessage))),
+            //                     t().createElement(_r.rp, { image: e.image, imageProps: { "aria-hidden": "true" } }),
+            //                     t().createElement(_r.ED, { text: e.text })
+            //                 ) :
+            //                 t().createElement(_r.sY, {
+            //                     key: e.value,
+            //                     name: r.key,
+            //                     value: e.value,
+            //                     checked: e.value === r.value,
+            //                     handleChange: v,
+            //                     threeLine: !0,
+            //                     skipChangeSelection: !0,
+            //                     disabled: S || e.disabled,
+            //                     "data-autom": `${r.key}${e.value}`,
+            //                     withAriaLabeledBy: !0
+            //                 },
+            //                     (e.productMessage || e.violator) && t().createElement(Rr.A, (0, Ce.A)({
+            //                         className: qe()({ "rf-bfe-coming-soon-violator": e.productMessage }),
+            //                         noScrim: !0,
+            //                         reduced: !0
+            //                     }, (0, Ie.OH)(e.productMessage || e.violator))),
+            //                     t().createElement(_r._V, { text: e.text }),
+            //                     t().createElement(_r.ED, { "data-autom": `price${r.key}${e.value}`, text: Hr(e) })
+            //                 )
+            //             )
+            //         ),
+            
+            //         c && "dimensionColor" !== r.key && t().createElement("div", (0, Ce.A)({
+            //             className: `rf-bfe-dimension-downpaymentfull ${ze.A.CAPTION}`
+            //         }, (0, Ie.OH)(c))),
+            //         r.footer && t().createElement(Ba.A, { disabled: S },
+            //             t().createElement(_.Typography, { component: "div", variant: "body4", color: "textPrimary", dangerouslySetInnerHTML: { __html: r.footer } })
+            //         )
+            //     );
+            // },
              Yr = (e, a) => {
                 let {
                     dimension: r,
@@ -15371,27 +15566,37 @@
                     ref: a
                 },
             
-                    // -------- PACK SIZE DROPDOWN --------
-                    isPackSize ? t().createElement("div", { className: "pack-size-dropdown" },
-                        t().createElement("label", { htmlFor: r.key }, "Select Pack Size"),
-                        t().createElement("select", {
-                            id: r.key,
-                            name: r.key,
-                            value: r.value,
-                            onChange: (e) => v(e.target.value),
-                            disabled: S
-                        },
-                            Object.keys(packSizeOptions).map(key =>
-                                t().createElement("option", {
-                                    key: key,
-                                    value: key,
-                                    disabled: S || w.find(e => e.value === key)?.disabled
-                                }, packSizeOptions[key])
+                    isPackSize ? t().createElement(_r.c6, {
+                        legend: t().createElement(Ur, { dimension: r }),
+                        disabled: S,
+                        withGutters: !p,
+                        className: qe()("rf-bfe-product-dimension-group", "pack-size-group"),
+                        childAfterLegend: t().createElement(t().Fragment, null, 
+                            t().createElement(Br, { dimension: r }),
+                            m && s
+                        ),
+                        classes: { items: { "rf-bfe-step-disabled": S } }
+                    },
+                        t().createElement("div", { className: "rf-bfe-pack-size-wrapper" },
+                            t().createElement("select", {
+                                id: r.key,
+                                className: "rf-bfe-pack-size-select",
+                                name: r.key,
+                                value: r.value,
+                                onChange: (e) => v(e.target.value),
+                                disabled: S
+                            },
+                                Object.keys(packSizeOptions).map(key =>
+                                    t().createElement("option", {
+                                        key: key,
+                                        value: key,
+                                        disabled: S || w.find(e => e.value === key)?.disabled
+                                    }, packSizeOptions[key])
+                                )
                             )
                         )
                     ) :
             
-                    // -------- OTHER DIMENSIONS --------
                     g ? t().createElement(_r.ee, {
                         key: r.key,
                         legend: t().createElement(Ur, { dimension: r }),
@@ -15428,7 +15633,6 @@
                         }))
                     ) :
             
-                    // -------- NORMAL DIMENSION --------
                     t().createElement(_r.c6, {
                         legend: t().createElement(Ur, { dimension: r }),
                         disabled: S,
@@ -15516,8 +15720,6 @@
                     )
                 );
             },
-            
-            
             Gr = t().forwardRef(Yr),
             qr = (e, a) => {
                 let {
