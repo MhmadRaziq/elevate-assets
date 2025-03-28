@@ -10699,12 +10699,12 @@
                             }
                         };
                         c.options.headers = c.options.headers || {}, c.options.headers["x-aos-ui-fetch-call-1"] = r;
-                        const d = fetch(c.url, c.options).then((e => e)),
-                            u = new Promise(((e, n) => {
-                                t = setTimeout((() => {
-                                    s.abort(), n(new i(c, r))
-                                }), a.timeout)
-                            }));
+                        // const d = fetch(c.url, c.options).then((e => e)),
+                        //     u = new Promise(((e, n) => {
+                        //         t = setTimeout((() => {
+                        //             s.abort(), n(new i(c, r))
+                        //         }), a.timeout)
+                        //     }));
                         try {
                             const e = window.performance && window.performance.now(),
                                 t = await Promise.race([d, u]);
