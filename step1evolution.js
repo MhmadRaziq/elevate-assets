@@ -10724,25 +10724,25 @@
                         // } finally {
                         //     clearTimeout(t)
                         // }
-                    },
-                    d = async function(e) {
-                        let t, a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                        const r = l(),
-                            n = {
-                                url: e,
-                                options: a
-                            };
-                        try {
-                            t = await c(n.url, n.options, r)
-                        } catch (e) {
-                            throw e
-                        }
-                        try {
-                            return await t.json()
-                        } catch (e) {
-                            throw new s(t, n, e, r)
-                        }
                     }
+                    // d = async function(e) {
+                    //     let t, a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                    //     const r = l(),
+                    //         n = {
+                    //             url: e,
+                    //             options: a
+                    //         };
+                    //     try {
+                    //         t = await c(n.url, n.options, r)
+                    //     } catch (e) {
+                    //         throw e
+                    //     }
+                    //     try {
+                    //         return await t.json()
+                    //     } catch (e) {
+                    //         throw new s(t, n, e, r)
+                    //     }
+                    // }
             },
             3808: (e, t, a) => {
                 "use strict";
