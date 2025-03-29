@@ -19649,9 +19649,7 @@
                 }, y, k ? t().createElement(Ma.A, {
                     data: v,
                     className: "rf-summary-chat"
-                }) : null), E))), t().createElement("div", {
-                    className: "rf-bfe-summary-grid"
-                },  t().createElement(je.A, { in: i || !s
+                }) : null), E))), t().createElement(je.A, { in: i || !s
                 }, t().createElement("div", {
                     className: "rf-bfe-summary-quotes-box-fullWidth"
                 }, O ? t().createElement(Ai, {
