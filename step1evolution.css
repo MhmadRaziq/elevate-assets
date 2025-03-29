@@ -20421,20 +20421,25 @@ html.as-keyboarduser .waitindicator:focus {
 
 .rf-bfe-summary-section-fullWidth .rf-bfe-summary-fulfillment-fullWidth {
     max-width: 328px;
-    min-width: 260px
+    min-width: 260px;
+    display: none;
 }
 
 @media(max-width:1023px)and (max-device-width:736px) {
     .rf-bfe-summary-section-fullWidth .rf-bfe-summary-fulfillment-fullWidth {
         max-width: none;
         min-width: auto;
-        padding-top: 42px
+        padding-top: 42px;
+        display: none;
+
     }
 }
 
 .rf-bfe-summary-section-fullWidth .rf-bfe-summary-fulfillment-fullWidth .rf-bfe-summary-no-saveditem {
     border-top: 0;
-    padding-bottom: 0
+    padding-bottom: 0;
+    display: none;
+
 }
 
 .rf-bfe-summary-section-fullWidth .rc-monthly-price .rc-prices-tradeincredit .as-price-highlight {
