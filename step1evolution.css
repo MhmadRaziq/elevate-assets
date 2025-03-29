@@ -20411,7 +20411,7 @@ html.as-keyboarduser .waitindicator:focus {
     .rf-bfe-summary-section-fullWidth .rf-bfe-summary-grid {
         float: none;
         width: auto;
-        padding-bottom: 20px;
+        padding-bottom: 0px;
     }
 }
 
