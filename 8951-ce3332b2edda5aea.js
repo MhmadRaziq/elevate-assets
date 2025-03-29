@@ -3274,7 +3274,7 @@
               },
               {
                 link: {
-                  link: '/pricing',
+                  link: '/purchase',
                   label: 'Pricing',
                   gaDataEventName: 'pricing_menu_click',
                   gaDataCtaId: 'pricing',
