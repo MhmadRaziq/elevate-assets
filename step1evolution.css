@@ -20422,7 +20422,6 @@ html.as-keyboarduser .waitindicator:focus {
 .rf-bfe-summary-section-fullWidth .rf-bfe-summary-fulfillment-fullWidth {
     max-width: 328px;
     min-width: 260px;
-    display: none;
 }
 
 @media(max-width:1023px)and (max-device-width:736px) {
