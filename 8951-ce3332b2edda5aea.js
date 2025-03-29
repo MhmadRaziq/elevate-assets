@@ -3780,7 +3780,7 @@
         });
         var a = n(27573),
           r = n(7653);
-        let i = 'app.manychat.com',
+        let i = 'elevatereputation.com',
           c = (0, r.createContext)(i),
           l = () => (0, r.useContext)(c),
           s = e => {

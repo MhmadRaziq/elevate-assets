@@ -83,7 +83,7 @@
         });
         var r = n(27573),
           i = n(7653);
-        let o = "app.manychat.com",
+        let o = "elevatereputation.com",
           s = (0, i.createContext)(o),
           c = () => (0, i.useContext)(s),
           a = (e) => {

@@ -90,9 +90,9 @@
       };
       
         l = {
-          freeHref: '/signup?utm_content=freeplan',
-          proHref: 'https://app.manychat.com/profile/billingUpgrade?utm_content=proplan',
-          premiumHref: '/pricing/book-a-demo-call',
+          freeHref: '/purchase',
+          proHref: 'https://elevatereputation.com/purchase',
+          premiumHref: 'purchase',
           pricingSlug: '/pricing',
           compareSlug: '/product/compare-plans',
         },
@@ -104,7 +104,7 @@
             price: e => (0, o.H)(500, e),
             button: {
               children: 'Become pro',
-              to: 'https://app.manychat.com/profile/billingUpgrade?utm_content=proplan',
+              to: 'https://elevatereputation.com/purchase',
             },
             description: e =>
               (0, n.jsx)(n.Fragment, {
