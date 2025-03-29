@@ -15750,7 +15750,7 @@
                 t().useLayoutEffect(o, [o]);
             
                 const packSizeOptions = {
-                    "0": "Number of sets",
+                    "0": "Select",
                     "1": "1 Set (12 tables)",
                     "2": "2 Sets (24 tables)",
                     "3": "3 Sets (36 tables)",
