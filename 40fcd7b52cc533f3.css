@@ -700,7 +700,8 @@
 
 .LanguageSelect_arrow__k4ua6 {
     transform: scale(.75);
-    pointer-events: none
+    pointer-events: none;
+    display:none
 }
 
 /*# sourceMappingURL=40fcd7b52cc533f3.css.map*/

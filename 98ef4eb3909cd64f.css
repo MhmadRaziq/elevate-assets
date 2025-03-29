@@ -709,7 +709,9 @@
 
 .LanguageSelect_arrow__k4ua6 {
     transform: scale(.75);
-    pointer-events: none
+    pointer-events: none;
+    display:none
+
 }
 
 /*# sourceMappingURL=98ef4eb3909cd64f.css.map*/
