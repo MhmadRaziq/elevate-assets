@@ -490,7 +490,7 @@
         "use strict";
         n.r(t),
           (t.default = {
-            src: "https://mhmadraziq.github.io/elevate-assets/images/InstagramDM.png",
+            src: "https://mhmadraziq.github.io/elevate-assets/images/Google.svg",
             height: 70,
             width: 270,
             blurWidth: 0,
