@@ -3120,7 +3120,7 @@
                     gaDataCtaId: 'ig',
                   },
                   {
-                    link: '/product/whatsapp',
+                    link: '/purchase',
                     label: 'Crisis Management',
                     description: 'More 5-star reviews, private issue resolution.',
                     icon: c.default.src,
@@ -3383,7 +3383,7 @@
               },
               {
                 link: {
-                  link: '/es/product/whatsapp',
+                  link: '/purchase',
                   label: 'WhatsApp',
                   gaDataEventName: 'product_menu_click',
                   gaDataCtaId: 'wa',
@@ -3444,7 +3444,7 @@
               },
               {
                 link: {
-                  link: '/pt/product/whatsapp',
+                  link: '/purchase',
                   label: 'WhatsApp',
                   gaDataEventName: 'product_menu_click',
                   gaDataCtaId: 'wa',

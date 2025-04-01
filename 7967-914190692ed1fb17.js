@@ -82,7 +82,7 @@
               title: 'WhatsApp',
               descr:
                 'Create interactive conversations for your business on WhatsApp, one of the fastest growing Messaging Apps in the world.',
-              link: '/product/whatsapp',
+              link: '/purchase',
               logo: {
                 src: 'https://mccdn.me/martcdn/next-lp/sections/ChannelsShowcaseSection_whatsapp.png',
                 width: 1345,
