@@ -431,10 +431,10 @@
             return r;
           },
         });
-        let r = new Set(["/creators-b", "/product/instagram-redesign"]),
+        let r = new Set(["/creators-b", "/purchase"]),
           i = {
             "/creators-b": { btnColor: "yellow", btnTextColor: "black" },
-            "/product/instagram-redesign": {
+            "/purchase": {
               btnColor: "amethyst",
               btnTextColor: "white",
             },

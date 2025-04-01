@@ -40,7 +40,7 @@
               title: 'Instagram Direct Messages',
               descr:
                 'Instagram DM Automation is the easiest and most powerful platform to automate your Instagram Messages and marketing for more sales and better customer support.',
-              link: '/product/instagram',
+              link: '/purchase',
               logo: {
                 src: 'https://mccdn.me/martcdn/next-lp/sections/ChannelsShowcaseSection_instagram.png',
                 width: 1345,

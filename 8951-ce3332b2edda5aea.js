@@ -3112,7 +3112,7 @@
                 gaHoverEventName: 'product_menu_hover',
                 links: [
                   {
-                    link: '/product/instagram',
+                    link: '/purchase',
                     label: 'More Reviews',
                     description: 'Turn every table into a constant source of glowing customer reviews.',
                     icon: r.default.src,
@@ -3367,7 +3367,7 @@
             links: [
               {
                 link: {
-                  link: '/es/product/instagram',
+                  link: '/purchase',
                   label: 'Instagram',
                   gaDataEventName: 'product_menu_click',
                   gaDataCtaId: 'ig',
@@ -3428,7 +3428,7 @@
             links: [
               {
                 link: {
-                  link: '/pt/product/instagram',
+                  link: '/purchase',
                   label: 'Instagram',
                   gaDataEventName: 'product_menu_click',
                   gaDataCtaId: 'ig',
@@ -3506,7 +3506,7 @@
             ],
             productLinks: [
               // { label: 'Messenger', link: '/product/messenger-marketing' },
-              // { label: 'Instagram', link: '/product/instagram' },
+              // { label: 'Instagram', link: '/purchase' },
               // { label: 'Manychat AI', link: 'https://elevatereputation.com/product/ai/', target: '_self' },
               // { label: 'SMS Marketing', link: '/sms-marketing' },
               // { label: 'Integrations', link: '/integrations' },
