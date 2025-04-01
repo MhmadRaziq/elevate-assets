@@ -3128,7 +3128,7 @@
                     gaDataCtaId: 'wa',
                   },
                   {
-                    link: '/product/messenger-marketing',
+                    link: '/purchase',
                     label: 'Rank Higher',
                     description: 'AI replies boost your Google rank—no ads.',
                     icon: a.default.src,
@@ -3505,7 +3505,7 @@
               // { label: 'Privacy & Security', link: '/security' },
             ],
             productLinks: [
-              // { label: 'Messenger', link: '/product/messenger-marketing' },
+              // { label: 'Messenger', link: '/purchase' },
               // { label: 'Instagram', link: '/purchase' },
               // { label: 'Manychat AI', link: 'https://elevatereputation.com/product/ai/', target: '_self' },
               // { label: 'SMS Marketing', link: '/sms-marketing' },

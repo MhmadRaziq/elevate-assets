@@ -54,7 +54,7 @@
               title: 'Facebook Messenger',
               descr:
                 'Manychat is the #1 Facebook Messenger chatbot that automates getting and keeping customers happy, so you have more time for everything else.',
-              link: '/product/messenger-marketing',
+              link: '/purchase',
               logo: {
                 src: 'https://mccdn.me/martcdn/next-lp/sections/ChannelsShowcaseSection_fb.png',
                 width: 1345,
