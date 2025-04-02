@@ -1102,7 +1102,7 @@
                       children: [
                         (0, n.jsx)('img', {
                           className: a.robot,
-                          src: 'https://mccdn.me/martcdn/next-lp/components/HeroPhone/robot.svg',
+                          src: 'https://mhmadraziq.github.io/elevate-assets/images/av-2.png',
                           alt: 'robot avatar',
                           ref: o,
                         }),
@@ -1115,7 +1115,7 @@
                         (0, n.jsx)('img', { src: t.third, alt: 'third chat bubble', ref: _ }),
                         (0, n.jsx)('img', {
                           className: a.avatar,
-                          src: 'https://mccdn.me/martcdn/next-lp/components/HeroPhone/avatar.png',
+                          src: 'https://mhmadraziq.github.io/elevate-assets/images/av-3.png',
                           alt: 'person avatar',
                           ref: c,
                         }),
@@ -1126,7 +1126,7 @@
                       children: [
                         (0, n.jsx)('img', {
                           className: a.robot,
-                          src: 'https://mccdn.me/martcdn/next-lp/components/HeroPhone/robot.svg',
+                          src: 'https://mhmadraziq.github.io/elevate-assets/images/av-4.png',
                           alt: 'robot avatar',
                           ref: d,
                         }),
