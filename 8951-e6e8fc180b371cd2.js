@@ -841,8 +841,8 @@
         t.default = () =>
           (0, a.jsx)(r.Z, {
             links: [
-              { label: 'Pol\xedtica de privacidad', link: '/es/legal/privacy' },
-              { label: 'T\xe9rminos de servicio', link: '/es/legal/tos' },
+              { label: 'Pol\xedtica de privacidad', link: '/es/privacy' },
+              { label: 'T\xe9rminos de servicio', link: '/es/terms' },
               {
                 label: 'Configuraci\xf3n de Privacidad',
                 link: '#',
@@ -865,8 +865,8 @@
         t.default = () =>
           (0, a.jsx)(r.Z, {
             links: [
-              { label: 'Pol\xedtica de Privacidade', link: '/pt/legal/privacy' },
-              { label: 'Termos de Servi\xe7o', link: '/pt/legal/tos' },
+              { label: 'Pol\xedtica de Privacidade', link: '/pt/privacy' },
+              { label: 'Termos de Servi\xe7o', link: '/pt/terms' },
               {
                 label: 'Configura\xe7\xf5es de Privacidade',
                 link: '#',
@@ -3494,8 +3494,8 @@
           };
         var _ = n(74859);
         let h = [
-            { label: 'Privacy Policy', link: 'https://elevatereputation.com/legal/privacy' },
-            { label: 'Terms of Service', link: 'https://elevatereputation.com/legal/tos' },
+            { label: 'Privacy Policy', link: 'https://elevatereputation.com/privacy' },
+            { label: 'Terms of Service', link: 'https://elevatereputation.com/terms' },
           ],
           p = {
             bottomLinks: h,
