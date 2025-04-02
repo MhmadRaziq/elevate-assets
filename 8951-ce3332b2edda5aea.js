@@ -3561,7 +3561,7 @@
           v = {
             heroText: ' Boost Your Reputation',
             subline:
-              'Your Reputation Can Make or Break Your Business – Take Control Now!o sales, leads, and\xa0conversions today',
+              'Your Reputation Can Make or Break Your Business – Take Control Now!',
             btn: {
               label: 'Get Started',
               link: '/purchase',
