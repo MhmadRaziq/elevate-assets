@@ -1126,7 +1126,7 @@
                     ],
                   }),
                   (0, a.jsx)('a', {
-                    href: 'https://elevatereputation.com/affiliate/',
+                    href: 'https://elevatereputation.com/affiliate',
                     target: '_blank',
                     children: (0, a.jsxs)('div', {
                       className: 'caps flex flex_aic pointer '.concat(o.underline),
@@ -3263,7 +3263,7 @@
                 //     gaDataCtaId: 'hire-an-agency',
                 //   },
                   {
-                    link: 'https://elevatereputation.com/affiliate/',
+                    link: 'https://elevatereputation.com/affiliate',
                     label: 'Join the Affiliate Program',
                     description: 'Earn up to 50% recurring commission',
                     icon: o.default.src,
@@ -3539,7 +3539,7 @@
             ],
             agenciesLinks: [
               // { type: 'listing', label: 'Hire an Agency', link: '/' },
-              // { label: 'Join the Affiliate Program', link: 'https://elevatereputation.com/affiliate/' },
+              // { label: 'Join the Affiliate Program', link: 'https://elevatereputation.com/affiliate' },
             ],
           },
           g = {
