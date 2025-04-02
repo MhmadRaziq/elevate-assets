@@ -1091,7 +1091,7 @@
                         (0, n.jsx)('img', { src: t.first, alt: 'first chat bubble', ref: m }),
                         (0, n.jsx)('img', {
                           className: a.avatar,
-                          src: 'https://mccdn.me/martcdn/next-lp/components/HeroPhone/avatar.png',
+                          src: 'https://mhmadraziq.github.io/elevate-assets/images/av-1.png',
                           alt: 'person avatar',
                           ref: r,
                         }),
