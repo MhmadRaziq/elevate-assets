@@ -752,7 +752,7 @@ p .inside-rich-text:last-child {
 
 .swiper-wrapper {
     transition-timing-function: var(--ease);
-    display: none;
+    display: none !important;
 }
 
 .bg_cobalt {
