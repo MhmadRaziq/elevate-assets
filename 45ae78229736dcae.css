@@ -917,7 +917,9 @@
 }
 
 .HeroPhone_robot__mNqoP {
-    margin-right: 1%
+    margin-right: 1%;
+    display: none !important;
+
 }
 
 .HeroPhone_bubble_01__ogXFY {
