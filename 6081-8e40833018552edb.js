@@ -1057,7 +1057,7 @@
     
           return t;
         }, {});
-    
+        console.log(t)
         return t;
       };
     
