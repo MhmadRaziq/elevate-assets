@@ -3121,7 +3121,7 @@
                   },
                   {
                     link: '/purchase',
-                    label: 'Crisis Management',
+                    label: 'Crisis Aversion',
                     description: 'More 5-star reviews, private issue resolution.',
                     icon: c.default.src,
                     gaDataEventName: 'product_menu_click',
