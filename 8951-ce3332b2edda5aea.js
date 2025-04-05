@@ -3280,6 +3280,14 @@
                   gaDataCtaId: 'pricing',
                 },
               },
+              {
+                link: {
+                  link: 'https://wa.me/447596081462',
+                  label: 'Support',
+                  gaDataEventName: 'pricing_menu_click',
+                  gaDataCtaId: 'pricing',
+                },
+              },
             //   {
             //     name: 'Resources',
             //     gaHoverEventName: 'resources_menu_hover',
