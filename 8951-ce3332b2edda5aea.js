@@ -1111,7 +1111,7 @@
                 children: [
                   (0, a.jsxs)('a', {
                     className: 'caps flex flex_aic pointer '.concat(o.underline),
-                    href: 'https://mccdn.me/martcdn/logo.svg',
+                    href: 'https://mhmadraziq.github.io/elevate-assets/images/loooogo.png',
                     download: !0,
                     children: [
                       (0, a.jsx)('img', {
