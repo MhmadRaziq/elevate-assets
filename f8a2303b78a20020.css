@@ -5897,6 +5897,9 @@ header {
 .m_b-0 {
     margin-bottom: 0
 }
+.last-child-m_b-0 > :nth-last-child(-n+2) {
+    display: none;
+}
 
 .m_t-xxxs {
     margin-top: var(--y-xxxs)
